@@ -8,7 +8,7 @@
 
 <body>
     <div class="header">
-        <div class = "image-container">
+        <div class = "image-container2">
                  <img src="images/bg_logo.png" alt="Logo" class="icon2">
               </div>
          <h5>MITZTIANPC WIRED INTERNET SERVICES</h5>
