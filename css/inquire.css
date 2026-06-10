@@ -1,3 +1,114 @@
 body{
-    color: blue;
+    background-color: #004AAD;
+    margin: 0;
+}
+.header{
+     background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    
+}
+.header h5{
+    color: black;
+    margin-top: 7px;
+    margin-left: 50px;
+    
+}
+.center_name{
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+}
+.center_lower_name{
+    color: white;
+    margin-top: 0;
+    margin-left: 190px;
+}
+.image-container {
+    width: 10px;
+}
+.icon2 {
+    width: 50px;
+}
+
+.icon{
+     width: 35px;   
+     height: 35px;
+     margin-left: 890px;
+}
+.dropdown_menu {
+    background-color: white;
+    padding: 2px 5px;
+    margin-right: 10px;
+    border: none;
+    width: 100px;
+ 
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    margin-left: 800px;
+  
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover
+{
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+     display: block;
+}
+.image-container {
+    text-align: center;
+    
+}
+.form {
+    background: linear-gradient(135deg,rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);
+    margin-top: 50px;
+     border-radius: 7px;
+    padding: 5px;
+    margin-left: 50px;
+     width: 700px;
+}
+
+.form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.form label{
+    margin-left: 50px;
+}
+
+.form input,
+.form textarea {
+    margin-left: 40px;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 2px;
+}
+.form textarea{
+    width: 80%;
+}
+
+.form button {
+    width: 30%;
+    padding: 5px;
+    margin-left: 230px;
+    background-color: #004AAD;
+    color: white;
+    border-radius: 5px;
 }
