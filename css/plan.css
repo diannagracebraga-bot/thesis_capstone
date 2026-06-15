@@ -86,43 +86,30 @@ body{
     height: 50px;
 }
 
-
-.form {
-    background: linear-gradient(135deg,rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);
-    margin-top: 50px;
-     border-radius: 7px;
-    padding: 5px;
-    margin-left: 50px;
-     width: 700px;
-}
-
-.form h3 {
+.plans{
+    display:flex;
+    justify-content:center;
     text-align: center;
-    margin-bottom: 20px;
-    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 40px;
+    padding: 23px;
+    flex-wrap: wrap;
 }
 
-.form label{
-    margin-left: 50px;
+.plan-card{ 
+    background:white;
+    padding:20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    
 }
-
-.form input,
-.form textarea {
-    margin-left: 40px;
-    width: 50%;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 2px;
-}
-.form textarea{
-    width: 80%;
-}
-
-.form button {
-    width: 30%;
-    padding: 5px;
-    margin-left: 230px;
+.plan-card button{
+    border-radius: 5px;
     background-color: #004AAD;
     color: white;
-    border-radius: 5px;
+    border: none;
+    padding: 8px;
+
 }
+
+

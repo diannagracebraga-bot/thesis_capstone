@@ -30,8 +30,9 @@
                 
               <div class = "image-container">
                  <img src="images/bg_logo.png" alt="Logo">
-              </div>
-    <div class="bottom-header"></div>
+              </div>              
+
+   <!-- <div class="bottom-header"></div>-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
