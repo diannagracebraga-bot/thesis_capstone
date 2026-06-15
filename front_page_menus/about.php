@@ -41,7 +41,7 @@
 			<img src="../images/mail.png" alt="mail">
 			<p>mpcwiredinternetservice@gmail.com</p>
 			<img src="../images/phone.png" alt="phone">
-			<p>09 266 468 174</p>
+			<p>0926 646 8174</p>
 			<img src="../images/fb.png" alt="fb">
 			<p>Mpc Wired Internet Services</p>
 			<img src="../images/location.png" alt="location">

@@ -1,3 +1,5 @@
+
+
 body{
     background-color: #004AAD;
     margin: 0;
@@ -87,7 +89,7 @@ body{
 }
 .pad{
     background: linear-gradient(135deg, rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);
-    margin-top: 5%;
+    margin-top: 200px;
     padding: 7%;
 }
 
@@ -106,12 +108,13 @@ body{
 .details p{
     text-align: left;
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 40px;
     margin-right: 17px;
 }
 
 .details img{
     width: 25px;
     height: 25px;
+    margin-left: 80px;
     vertical-align: middle;
 }
