@@ -108,13 +108,13 @@ body{
 .details p{
     text-align: left;
     display: inline-block;
-    margin-left: 60px;
+    margin-left: 40px;
     margin-right: 17px;
 }
 
 .details img{
     width: 25px;
     height: 25px;
-    margin-left: 70px;
+    margin-left: 80px;
     vertical-align: middle;
 }
