@@ -85,9 +85,6 @@ body{
     width: 100%;
     height: 50px;
 }
-
-
-
 .pad{
     background: linear-gradient(135deg, rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);
     margin-top: 5%;
