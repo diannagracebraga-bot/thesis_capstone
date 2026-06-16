@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 </head>
-        <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/admin_dashboard.css">
 <body>
         <div class="sidebar">
             <a class="dashboard" href="#dashboard">Dashboard</a><br>

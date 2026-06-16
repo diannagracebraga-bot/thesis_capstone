@@ -1,5 +1,3 @@
-
-
 body{
     background-color: #004AAD;
     margin: 0;
@@ -87,6 +85,9 @@ body{
     width: 100%;
     height: 50px;
 }
+
+
+
 
 .plans{
     display:flex;
