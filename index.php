@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
     <link rel="stylesheet" href="css/index_style.css">
@@ -8,10 +9,11 @@
 
 <body>
     <div class="header">
-        <div class = "image-container2">
+        <div class = "logo-section">
                  <img src="images/bg_logo.png" alt="Logo" class="icon2">
-              </div>
-         <h5>MITZTIANPC WIRED INTERNET SERVICES</h5>
+                <h5>MITZTIANPC WIRED INTERNET SERVICES</h5>
+                </div>
+       
             <div class="dropdown">
                 <button class="dropdown_menu"> <img src="images/hamburger.png" alt="menu icon" class="icon">
                 </button>

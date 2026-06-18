@@ -37,7 +37,6 @@
         </div>
         <div class="header">    
         </div>
-
         <h1>USER MANAGEMENT TRACKING</h1>
         <div class="stats-container">
                 <div class="stat">
