@@ -31,9 +31,18 @@ h1{
     color: rgb(61, 113, 130);
     
 }
+.table-container{
+    width: 60%;
+    height: 75vh;
+    margin: auto ;
+    border: 1px solid black;
+    padding: 5px;
+    overflow-y: auto; /* vertical scroll */
+    overflow-x: auto; /*horizontal scroll  */
+}
 
  .table_applicants{
-    width: 60%;
+    width: 90%;
     margin: auto;
     border-collapse: collapse;
 }
@@ -54,4 +63,21 @@ h1{
     padding: 7px;
     border: 1px solid black;
     text-align: center;
+}
+
+.searchbar-container{
+    padding: 10px;
+}
+.searchbar-container input{
+    padding: 7px;
+    color: blue;
+
+}
+.searchbar-container button{
+    padding: 7px;
+    
+
+}
+.searchbar-container button:hover{
+    color: light;
 }

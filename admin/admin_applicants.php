@@ -19,7 +19,12 @@
         <div class="header">
         </div>
         	<h1>USER MANAGEMENT TRACKING</h1>
-			
+			<div class = "table-container">
+        <div class="searchbar-container">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Search</button>
+        </div>
+		<br>
 				<table class = "table_applicants">
 					<thead>
 					<tr>
@@ -41,7 +46,124 @@
         				    <button>Pending</button>
        						</td>
 						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr><tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr><tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr><tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr><tr>
+							<td>02</td>
+							<td>Heart Joy Abainza</td>
+							<td>heart@gmail.com</td>
+							<td>50 Mbps</td>
+							<td>06/16/2026</td>
+							 <td>
+        				    <button>Pending</button>
+       						</td>
+						</tr>
 				</table>
+				</div>
 			
 </body>
 </html>
