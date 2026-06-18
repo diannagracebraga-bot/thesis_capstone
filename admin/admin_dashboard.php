@@ -18,7 +18,6 @@
         
         <div class="header">
         </div>
-
         <h1>USER MANAGEMENT TRACKING</h1>
 </body>
 </html>
