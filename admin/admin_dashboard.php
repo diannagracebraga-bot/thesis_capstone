@@ -35,8 +35,6 @@
             <a class="dashboard" href="#user_management">User Management</a><br>
             <a class="dashboard" href="#content_management">Content Management</a><br>
         </div>
-        
-        
         <div class="header">    
         </div>
 
