@@ -62,7 +62,7 @@ body{
 }
 .metric-change{
     display: flex;
-    align_items: center;
+    align-items: center;
     gap: 6px;
     font-size: 14px;
     color: #666;
@@ -82,7 +82,7 @@ body{
 }
 .bar-chart-icon{
     display: flex;
-    gapL 3px;
+    gap: 3px;
     align-items: flex-end;
 }
 .bar{
@@ -95,7 +95,7 @@ body{
     width: 30px;
     height: 30px;
     margin-top: 50px;
-    item-align: center;
+    align-items: center;
 }
 
 .icon2{
