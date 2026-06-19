@@ -1,30 +1,3 @@
-body{
-    background-color:blue;
-    margin: 0;
-}
-.header{
-    background: blue;
-    width: 100%;
-    padding: 10px;
-}  
-.top-bar {
-    background: blue;
-    padding: 16px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-}
-.profile-button {
-    display: flex;
-    padding: 6px 6px 6px 12px;
-    background: pink;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
 .metric-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -32,7 +5,7 @@ body{
     margin-bottom: 20px;
 }
 .metric-card{
-    background: white;
+    background: linear-gradient(135deg,rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);;
     border-radius: 10px;
     padding: 20px;
     position: relative;
@@ -98,51 +71,6 @@ body{
     align-items: center;
 }
 
-.icon2{
-    width:60px;
-    height: 60px;
-    margin-left:70px;
-    margin-top: 50px
-}
-.header{
-    background: white;
-    width: 100%;
-    padding: 10px;
-}  
-.search-container {
-    display: flex;
-    align-items: center;
-    margin-left: 1500px;
-    width: 300px;
-    height: 100px;
-}
-.sidebar {
-    width: 200px;
-    background-color: white;
-    position: fixed;
-    height: 100%;
-}
-h1{
-    margin-top: 20px;
-    margin-left: 700px;
-    color: white;
-}
-.sidebar a{
-    display: block;
-    color: black    ;
-    padding: 12px;
-    text-decoration: none;
-}
-.sidebar a:hover{
-    background-color: #E5E4E2;
-    color: rgb(61, 113, 130);   
-}
-.dashboard{
-    display: flex;
-    padding: 12px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
 .stats-container {
   display: grid;
   gap: 24px;

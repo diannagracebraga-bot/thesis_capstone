@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	 <link rel="stylesheet" href="../css/admin_applicants.css">
+	 <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>
+	 <header class="top-bar">
+        <div class="search-container1">
+        <form action="/admin_customer.php" method="GET">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Search</button>
+        </form>
+        </div>
+        <button class="profile-button">
+                <div class="profile-container">
+                        <div class="profile-name"> Dianna Braga </div>
+                        <div class="profile-role"> Admin </div>
+                        </div>
+        </button>
+        </header>
+
+
 		<div class="sidebar">
+			 <div class="image-container">
+                        <img src="../images/bg_logo.png" alt="Logo" class="icon2">
+        </div>
             <a class="dashboard" href="admin_dashboard.php">Dashboard</a><br>
             <a href="#applicants">Applicants</a><br>
             <a href="admin_customer.php">Customer</a><br>

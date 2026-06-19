@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/admin_dashboard.css">
-        
+        <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 </head>
         
 <body>
         <header class="top-bar">
-        <div class="search-container">
+        <div class="search-container1">
         <form action="/admin_customer.php" method="GET">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
@@ -27,8 +27,8 @@
                         <img src="../images/bg_logo.png" alt="Logo" class="icon2">
         </div>
             <a class="dashboard" href="#dashboard">Dashboard</a><br>
-            <a class="dashboard" href="#applicants">Applicants</a><br>
-            <a class="dashboard" href="#customer">Customer</a><br>
+            <a class="dashboard" href="admin_applicants.php">Applicants</a><br>
+            <a class="dashboard" href="admin_customer.php">Customer</a><br>
             <a class="dashboard" href="#payments">Payments</a><br>
             <a class="dashboard" href="#inquiries">Inquiries</a><br>
             <a class="dashboard" href="#ticket_management">Ticket Management</a><br>
