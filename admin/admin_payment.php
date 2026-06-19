@@ -66,7 +66,7 @@
 							<td> 07/22/2025 </td>
 							<td> ₱1000 </td>
         				    <td> Not Paid </td>
-						
+                        </tr>
 						<tr>
 							<td> 2 </td>
 							<td> 100 mbps </td>
@@ -75,7 +75,8 @@
 							<td> 08/22/2025 </td>
 							<td> ₱1300 </td>
         				    <td> Paid </td>
-						</tr>
+                        </tr>
+
 
 
         

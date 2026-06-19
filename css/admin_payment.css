@@ -20,6 +20,10 @@
     cursor: pointer;
     margin-left: 700px;
 }
+.payment-plus:hover{
+    background-color: #71797E;
+    color: black;
+}
 .searchbar-container{
     display: flex;
     margin-left: 20px;
@@ -32,8 +36,9 @@
 }
 
 .table_applicants th{
+    border-collapse: collapse;
     padding: 7px;
-    border: 1px white;
+    border-bottom: 1px #818589;
     text-align: center;
 }
 
@@ -42,5 +47,10 @@
     padding: 7px;
     border-bottom: 1px solid #818589;
     text-align: center;
+}
+
+.table_applicants tr:hover td{
+    background: gray;
+    color: black;
 }
 
