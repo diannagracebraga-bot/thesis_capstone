@@ -28,13 +28,13 @@
                         <img src="../images/bg_logo.png" alt="Logo" class="icon2">
         </div>
             <a class="dashboard" href="admin_dashboard.php">Dashboard</a><br>
-            <a href="#applicants">Applicants</a><br>
-            <a href="admin_customer.php">Customer</a><br>
-            <a href="admin_payment.php">Payments</a><br>
-            <a href="admin_inquiries.php">Inquiries</a><br>
-            <a href="admin_ticket_management.php">Ticket Management</a><br>
-            <a href="admin_user_management.php">User Management</a><br>
-            <a href="admin_content_management.php">Content Management</a><br>
+            <a class="dashboard" href="#applicants">Applicants</a><br>
+            <a class="dashboard" href="admin_customer.php">Customer</a><br>
+            <a class="dashboard" href="admin_payment.php">Payments</a><br>
+            <a class="dashboard" href="admin_inquiries.php">Inquiries</a><br>
+            <a class="dashboard" href="admin_ticket_management.php">Ticket Management</a><br>
+            <a class="dashboard" href="admin_user_management.php">User Management</a><br>
+            <a class="dashboard" href="admin_content_management.php">Content Management</a><br>
         </div>
         
         <div class="header">
