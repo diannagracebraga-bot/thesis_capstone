@@ -41,9 +41,11 @@
         </div>
         	<h1>USER MANAGEMENT TRACKING</h1>
 			<div class = "table-container">
-        <div class="searchbar-container">
+       <div class= "aligned">
+			<div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
+		</div>
         </div>
 		<br>
 				<table class = "table_applicants">

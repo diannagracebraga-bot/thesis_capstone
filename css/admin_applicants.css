@@ -49,3 +49,10 @@
 .searchbar-container button:hover{
     color: light;
 }
+.aligned{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 90%;
+    margin: 10px auto;
+}
