@@ -50,9 +50,8 @@
 							<td> ₱1300 </td>
         				    <td> Paid </td>
                         </tr>
-
-
-
+</table>
+</div>
         
 
 </body>
