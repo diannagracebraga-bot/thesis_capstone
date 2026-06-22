@@ -5,6 +5,8 @@
     border-radius: 25px;
     border: 2px solid #D5E4F9;
     padding: 20px;
+    overflow-y: auto; /* vertical scroll */
+    overflow-x: auto; /*horizontal scroll  */
 }
  .table_applicants{
     width: 90%;
