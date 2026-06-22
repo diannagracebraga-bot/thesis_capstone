@@ -42,7 +42,7 @@
         				    <td> Not Paid </td>
                         </tr>
 						<tr>
-							<td> 2 </td>
+							<td>  </td>
 							<td> 100 mbps </td>
 							<td> Gcash </td>
 							<td> Inactive </td>
