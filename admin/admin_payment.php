@@ -7,35 +7,8 @@
 	<title></title>
 </head>
 <body>
-	<header class="top-bar">
-        <div class="search-container1">
-        <form action="/admin_customer.php" method="GET">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Search</button>
-        </form>
-        </div>
-        <button class="profile-button">
-                <div class="profile-container">
-                        <div class="profile-name"> Dianna Braga </div>
-                        <div class="profile-role"> Admin </div>
-                        </div>
-        </button>
-        </header>
-
-
-		<div class="sidebar">
-			 <div class="image-container">
-                        <img src="../images/bg_logo.png" alt="Logo" class="icon2">
-        </div>
-            <a class="dashboard" href="admin_dashboard.php">Dashboard</a><br>
-            <a class="dashboard" href="#applicants">Applicants</a><br>
-            <a class="dashboard" href="admin_customer.php">Customer</a><br>
-            <a class="dashboard" href="admin_payment.php">Payments</a><br>
-            <a class="dashboard" href="admin_inquiries.php">Inquiries</a><br>
-            <a class="dashboard" href="admin_ticket_management.php">Ticket Management</a><br>
-            <a class="dashboard" href="admin_user_management.php">User Management</a><br>
-            <a class="dashboard" href="admin_content_management.php">Content Management</a><br>
-        </div>
+	<?php include 'admin_sidebar_header_profile.php'; ?>
+	
 		<h1> User Management Tracking </h1>
 		<div class = "table-container">
         <div class="searchbar-container">
@@ -43,7 +16,8 @@
                 <button type="submit">Search</button>
 				<div class="payment-plus">
 					<div class="payment-add"> Add Payments/Bills </div>
-					</div>             
+					</div> 
+				          
         </div>
 		<br>
 				<table class = "table_applicants">

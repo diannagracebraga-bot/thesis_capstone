@@ -8,35 +8,8 @@
 </head>
         
 <body>
-        <header class="top-bar">
-        <div class="search-container1">
-        <form action="/admin_customer.php" method="GET">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Search</button>
-        </form>
-        </div>
-        <button class="profile-button">
-                <div class="profile-container">
-                        <div class="profile-name"> Dianna Braga </div>
-                        <div class="profile-role"> Admin </div>
-                        </div>
-        </button>
-        </header>
-        <div class="sidebar">
-                <div class="image-container">
-                        <img src="../images/bg_logo.png" alt="Logo" class="icon2">
-        </div>
-            <a class="dashboard" href="#dashboard">Dashboard</a><br>
-            <a class="dashboard" href="admin_applicants.php">Applicants</a><br>
-            <a class="dashboard" href="admin_customer.php">Customer</a><br>
-            <a class="dashboard" href="#payments">Payments</a><br>
-            <a class="dashboard" href="#inquiries">Inquiries</a><br>
-            <a class="dashboard" href="#ticket_management">Ticket Management</a><br>
-            <a class="dashboard" href="#user_management">User Management</a><br>
-            <a class="dashboard" href="#content_management">Content Management</a><br>
-        </div>
-        <div class="header">    
-        </div>
+        <?php include 'admin_sidebar_header_profile.php'; ?>
+
         <h1>USER MANAGEMENT TRACKING</h1>
         <div class="stats-container">
                 <div class="stat">
