@@ -25,12 +25,20 @@
 					<thead>
 					<tr>
 						<th> ID </th>
-						<th> PLAN </th>
-						<th> PAYMENT METHOD </th>
+						<th>FULL NAME </th>
+						<th>EMAIL ADDRESS</th>
+						<th> CONTACT NUMBER </th>
+						<th> DATE RECEIVED </th>
 						<th> STATUS </th>
-						<th> DUE DATE </th>
-						<th> AMOUNT </th>
-						<th> REMARKS </th>
+						<th> ACTION </th>
+					</tr>
+					<tr>
+						<th>32</th>
+						<th>Heart Joy Abainza</th>
+						<th>heartjoy@gmail.com</th>
+						<th>09 266 467 814</th>
+						<th></th>
+
 					</tr>
 					</thead>
 </body>
