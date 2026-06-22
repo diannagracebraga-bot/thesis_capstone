@@ -7,43 +7,17 @@
 	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>
-	 <header class="top-bar">
-        <div class="search-container1">
-        <form action="/admin_customer.php" method="GET">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Search</button>
-        </form>
-        </div>
-        <button class="profile-button">
-                <div class="profile-container">
-                        <div class="profile-name"> Dianna Braga </div>
-                        <div class="profile-role"> Admin </div>
-                        </div>
-        </button>
-        </header>
-
-
-		<div class="sidebar">
-			 <div class="image-container">
-                        <img src="../images/bg_logo.png" alt="Logo" class="icon2">
-        </div>
-            <a class="dashboard" href="admin_dashboard.php">Dashboard</a><br>
-            <a class="dashboard" href="#applicants">Applicants</a><br>
-            <a class="dashboard" href="admin_customer.php">Customer</a><br>
-            <a class="dashboard" href="admin_payment.php">Payments</a><br>
-            <a class="dashboard" href="admin_inquiries.php">Inquiries</a><br>
-            <a class="dashboard" href="admin_ticket_management.php">Ticket Management</a><br>
-            <a class="dashboard" href="admin_user_management.php">User Management</a><br>
-            <a class="dashboard" href="admin_content_management.php">Content Management</a><br>
-        </div>
-        
+	<?php include 'admin_sidebar_header_profile.php'; ?>
+	
         <div class="header">
         </div>
         	<h1>USER MANAGEMENT TRACKING</h1>
 			<div class = "table-container">
-        <div class="searchbar-container">
+       <div class= "aligned">
+			<div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
+		</div>
         </div>
 		<br>
 				<table class = "table_applicants">
@@ -233,7 +207,7 @@
         				    <button>Pending</button>
        						</td>
 						</tr>
-						<tr>
+	                    <tr>
 							<td>02</td>
 							<td>Heart Joy Abainza</td>
 							<td>heart@gmail.com</td>

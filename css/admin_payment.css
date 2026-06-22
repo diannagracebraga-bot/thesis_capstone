@@ -1,9 +1,9 @@
 .table-container{
     width: 75%;
-    height: 75vh;
+    height: 100vh;
     margin: auto ;
-    border-radius: 25px;
-    border: 2px solid #D5E4F9;
+    border-radius: 50px;
+    border: 2px solid violet;
     padding: 20px;
     overflow-y: auto; /* vertical scroll */
     overflow-x: auto; /*horizontal scroll  */
@@ -52,7 +52,7 @@
 }
 
 .table_applicants tr:hover td{
-    background: gray;
+    background: #E5E4E2;
     color: black;
 }
 
