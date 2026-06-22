@@ -16,10 +16,12 @@
 		<h1> User Management Tracking </h1>
 
 			<div class = "table-container">
+				<div class = "aligned" >
         <div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
 				</div>
+</div>
 		<br>
 				<table class = "table_inquiries">
 					<thead>
@@ -32,14 +34,217 @@
 						<th> STATUS </th>
 						<th> ACTION </th>
 					</tr>
+					</thead>
 					<tr>
-						<th>32</th>
-						<th>Heart Joy Abainza</th>
-						<th>heartjoy@gmail.com</th>
-						<th>09 266 467 814</th>
-						<th></th>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
 
 					</tr>
-					</thead>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+						<tr>
+						<td>32</td>
+						<td>Heart Joy Abainza</td>
+						<td>heartjoy@gmail.com</td>
+						<td>09 266 467 814</td>
+						<td>06/22/2026</td>
+						<td>PENDING</td>
+						<td><button>view</button></td>
+
+					</tr>
+					
 </body>
 </html>
