@@ -1,0 +1,59 @@
+.form_container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.container {
+    background-color: lightblue;
+    border: 1px solid;
+    padding: 25px;
+    border-radius: 8px;
+}
+.status label,
+.action label,
+.customer_details label,
+.customer_concern_description label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+.status select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.action-btn {
+    width: 100px;
+    height: 38px;
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.action-btn:hover {
+    background-color: #1b7fb8;
+}
+
+.customer_details,
+.customer_concern_description {
+    margin-top: 20px;
+}
+
+.customer_details textarea,
+.customer_concern_description textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+}

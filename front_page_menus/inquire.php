@@ -31,7 +31,7 @@
         
     <div class = "form ">
         <h3>Inquire</h3>
-        <form action="submit.php" method="POST">
+        <form action="../php/submit_inquiry.php" method="POST">
 
              <label for="name">Full Name:</label><br>
              <input type="text" id="name" name="name" placeholder="Full Name" required><br><br>

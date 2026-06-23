@@ -61,4 +61,14 @@
     width: 90%;
     margin: 10px auto;
 }
+.img-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 3px;
+}
 
+.img-btn img {
+    width: 35px;
+    height: 35px;
+}

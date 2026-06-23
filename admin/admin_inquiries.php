@@ -1,3 +1,7 @@
+<?php
+include '../database/database_connection.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,216 +39,30 @@
 						<th> ACTION </th>
 					</tr>
 					</thead>
-					<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
+<?php
+$sql = "SELECT * FROM inquiries_tbl";
+$result = mysqli_query($conn, $sql);
 
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
-						<tr>
-						<td>32</td>
-						<td>Heart Joy Abainza</td>
-						<td>heartjoy@gmail.com</td>
-						<td>09 266 467 814</td>
-						<td>06/22/2026</td>
-						<td>PENDING</td>
-						<td><button>view</button></td>
-
-					</tr>
+while($row = mysqli_fetch_assoc($result)) {
+?>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['full_name']; ?></td>
+        <td><?php echo $row['email_address']; ?></td>
+        <td><?php echo $row['contact_number']; ?></td>
+        <td><?php echo $row['date_received']; ?></td>
+        <td><?php echo $row['status']; ?></td>
+        <td>
+            <a href="admin_view_inquiries.php?id=<?php echo $row['id']; ?>">
+                <button class="img-btn"> <img src="../images/view_icon.png">
+					</button>
+            </a>
+        </td>
+    </tr>
+<?php
+}
+?>
+</table>
 					
 </body>
 </html>
