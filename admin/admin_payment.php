@@ -14,9 +14,11 @@
         <div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
-				<div class="payment-plus">
-					<div class="payment-add"> Add Payments/Bills </div>
-					</div> 
+
+				<div class = "payment-plus">
+                     <form action="admin_add_payment.php" method="get">
+                    <button type= "submit">Add customer</button>
+                </div>
 				          
         </div>
 		<br>
