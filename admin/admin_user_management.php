@@ -38,6 +38,8 @@
 							<td> Noel </td>
 							<td> Admin </td>
 							<td> Active</td>
+							<td><button><img src="../images/deact.png" class="icon"></img></button>
+						<button><img src="../images/edit.png" class="icon" ></img></button></td>
                         </tr>
 						<tr>
 							<td> 2 </td>
@@ -45,6 +47,7 @@
 							<td> Customer </td>
 							<td> Inactive </td>
                         </tr>
+</table>
 						
 </table>
 </div>

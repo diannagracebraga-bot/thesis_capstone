@@ -17,7 +17,7 @@
 
 				<div class = "payment-plus">
                      <form action="admin_add_payment.php" method="get">
-                    <button type= "submit">Add customer</button>
+                    <button type= "submit" class= "payment-plus">Add customer</button>
                 </div>
 				          
         </div>
