@@ -10,7 +10,6 @@
 </head>
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
-user management
     <h1> User Management Tracking </h1>
 		<div class = "table-container">
         <div class="searchbar-container">
@@ -35,10 +34,6 @@ user management
 					</tr>
 					</thead>
 						<tr>
-							<div class="icon-container">
-  <i class="fa-solid fa-heart"></i>
-  <i class="fa-solid fa-share"></i>
-</div>
 							<td> 1 </td>
 							<td> Noel </td>
 							<td> Admin </td>
