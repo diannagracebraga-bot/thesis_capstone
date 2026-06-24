@@ -1,13 +1,13 @@
 .table-container1{
-    width: 60%;
-    height: 75vh;
+    width: 75%;
+    height: 100vh;
     margin: auto ;
-    border: 1px solid black;
-    padding: 5px;
-    overflow-y: auto; /* vertical scroll */
-    overflow-x: auto; /*horizontal scroll  */
+    border-radius: 50px;
+    border: 2px solid black;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: auto;
 }
-
 .customer-list{
     width: 90%;
     margin: auto;
@@ -21,15 +21,21 @@
 }
 
 .customer-list th{
+    border-collapse: collapse;
     padding: 7px;
-    border: 1px solid black;
+    border-bottom: 1px #818589;
+    text-align: center;    
 }
 
 .customer-list td{
     background-color: lightblue;
     padding: 7px;
-    border: 1px solid black;
+    border-bottom: 1px solid #818589;
     text-align: center;
+}
+.customer-list tr:hover td{
+    background: #E5E4E2;
+    color: black;
 }
 
 .searchbar-container{

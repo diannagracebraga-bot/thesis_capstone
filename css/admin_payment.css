@@ -1,10 +1,12 @@
 .table-container{
     width: 75%;
-    height: 75vh;
+    height: 100vh;
     margin: auto ;
-    border-radius: 25px;
-    border: 2px solid #D5E4F9;
+    border-radius: 50px;
+    border: 2px solid violet;
     padding: 20px;
+    overflow-y: auto; 
+    overflow-x: auto; 
 }
  .table_applicants{
     width: 90%;
@@ -12,17 +14,15 @@
     border-collapse: collapse;
 }
 .payment-plus{
-    display: flex;
-    padding: 6px 6px 6px 12px;
-    background: pink;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    margin-left: 700px;
+    border-radius: 10px; 
+    letter-spacing: 3px;
+    padding: 2px;
+    margin-left: 400px;
+    color: blue;
 }
-.payment-plus:hover{
-    background-color: #71797E;
-    color: black;
+.payment-plus2{
+    background: blue;
+    padding: 2px;
 }
 .searchbar-container{
     display: flex;
@@ -50,7 +50,8 @@
 }
 
 .table_applicants tr:hover td{
-    background: gray;
+    background: #E5E4E2;
     color: black;
 }
 
+ 

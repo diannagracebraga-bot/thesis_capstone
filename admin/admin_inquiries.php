@@ -1,11 +1,68 @@
+<?php
+include '../database/database_connection.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
+	<link rel="stylesheet" href="../css/admin_inquiries.css">
+
+	<title>MITZIANPC WIRED INTERNET SERVICES</title>
+
 </head>
 <body>
-inquiries
+	<?php include 'admin_sidebar_header_profile.php'; ?>
+	
+		<h1> User Management Tracking </h1>
+
+			<div class = "table-container">
+				<div class = "aligned" >
+        <div class="searchbar-container">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Search</button>
+				</div>
+</div>
+		<br>
+				<table class = "table_inquiries">
+					<thead>
+					<tr>
+						<th> ID </th>
+						<th>FULL NAME </th>
+						<th>EMAIL ADDRESS</th>
+						<th> CONTACT NUMBER </th>
+						<th> DATE RECEIVED </th>
+						<th> STATUS </th>
+						<th> ACTION </th>
+					</tr>
+					</thead>
+<?php
+$sql = "SELECT * FROM inquiries_tbl";
+$result = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_assoc($result)) {
+?>
+    <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['full_name']; ?></td>
+        <td><?php echo $row['email_address']; ?></td>
+        <td><?php echo $row['contact_number']; ?></td>
+        <td><?php echo $row['date_received']; ?></td>
+        <td><?php echo $row['status']; ?></td>
+        <td>
+            <a href="admin_view_inquiries.php?id=<?php echo $row['id']; ?>">
+                <button class="img-btn"> <img src="../images/view_icon.png">
+					</button>
+            </a>
+        </td> 	
+    </tr>
+<?php
+} 
+?>
+</table>
+					
 </body>
 </html>
