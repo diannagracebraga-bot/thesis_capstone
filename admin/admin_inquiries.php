@@ -57,10 +57,10 @@ while($row = mysqli_fetch_assoc($result)) {
                 <button class="img-btn"> <img src="../images/view_icon.png">
 					</button>
             </a>
-        </td>
+        </td> 	
     </tr>
 <?php
-}
+} 
 ?>
 </table>
 					

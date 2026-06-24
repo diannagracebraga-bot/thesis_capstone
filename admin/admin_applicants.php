@@ -23,7 +23,7 @@
 				<table class = "table_applicants">
 					<thead>
 					<tr>
-						<th>ID</th>
+						<th>APPLICANT ID</th>
 						<th>FULL NAME</th>
 						<th>EMAIL</th>
 						<th>PLAN</th>
