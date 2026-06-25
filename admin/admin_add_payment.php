@@ -1,3 +1,6 @@
+<?php
+include '../database/database_payment.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
+    <link rel="stylesheet" href="../admin/admin_payment.php">
     <link rel="stylesheet" href="../css/admin_add_payment.css">
     <title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
@@ -23,8 +27,6 @@
                         </div>
         </button>
         </header>
-
-
 		<div class="sidebar">
 			 <div class="image-container">
                         <img src="../images/bg_logo.png" alt="Logo" class="icon2">
@@ -38,12 +40,10 @@
             <a href="admin_user_management.php">User Management</a><br>
             <a href="admin_content_management.php">Content Management</a><br>
         </div>
+
         <div class="add_payment">
             <h3>Add Payment</h3>
-
-            <form action="admin_add_payment.php" method="POST">
-                
-
+            <form action="record.php" method="post">
             <div class="form_group">
                 <label>Plan</label>
                 <select name="Plan" required>
@@ -56,21 +56,20 @@
                     </select>
                     </div>
                 <div class="form_grid">
-                     <form action="admin_add_payment.php" method="POST">
                             <div class="form_group">
-                                <label>First Name</label>
-                                <input type="words" name="First_Name" required>
+                                <label for="f_name">First Name</label>
+                                <input type="words" name="f_name" required>
                                 </div>
                             <div class="form_group">
-                                <label>Middle Name</label>
-                                <input type="words" name="Middle_Name" required>
+                                <label for="m_name">Middle Name</label>
+                                <input type="words" name="m_name" required>
                                 </div>
                             <div class="form_group">
-                                <label>Last Name</label>
-                                <input type="words" name="Last_Name" required>
+                                <label for="l_name">Last Name</label>
+                                <input type="words" name="l_name" required>
                                 </div>
                             <div class="form_group">
-                            <label>Payment method</label>
+                            <label for = "p_method">Payment method</label>
                             <select name="Payment_Method" required>
                                 <option value="">-- Select --</option>
                                 <option>Cash</option>
@@ -78,11 +77,11 @@
                             </select>
                             </div>
                             <div class="form_group">
-                                <label>Due Date</label>
-                                <input type="words" name="due_date" required>
+                                <label for="d_date">Due Date</label>
+                                <input type="words" name="d_date" required>
                             </div>
                             <div class="form_group">
-                            <label>Remarks</label>
+                            <label for="remarks">Remarks</label>
                             <select name="remarks" required>
                                 <option value="">-- Select --</option>
                                 <option>Paid</option>
@@ -90,12 +89,18 @@
                             </select>
                             </div>
                             <div class="form_group">
-                                <label>Amount</label>
+                                <label for="amount">Amount</label>
                                 <input type="words" name="amount" required>
                             </div>     
                             <div class="form_group full_width">
-                <input type="submit" value="ADD">
+                            <form action="admin_payment.php" method="get"> 
+                                <button class= "payment-plus" >Add customer</button>
+                                
+</form>
+                
             </div>
+
+
 
                 </div>
             </form>

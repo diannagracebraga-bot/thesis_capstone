@@ -1,7 +1,11 @@
+<?php
+include '../database/database_payment.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/admin_payment.css">
 	<link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 	<title></title>
@@ -16,8 +20,8 @@
                 <button type="submit">Search</button>
 
 				<div class = "payment-plus">
-                     <form action="admin_add_payment.php" method="get">
-                    <button type= "submit" class= "payment-plus">Add customer</button>
+                    <form action="admin_add_payment.php" method="get"> 
+                    <button class= "payment-plus" >Add customer</button>
                 </div>
 				          
         </div>
@@ -34,27 +38,33 @@
 						<th> REMARKS </th>
 					</tr>
 					</thead>
-						<tr>
-							<td> 1 </td>
-							<td> 50 mbps </td>
-							<td> Cash </td>
-							<td> Active</td>
-							<td> 07/22/2025 </td>
-							<td> ₱1000 </td>
-        				    <td> Not Paid </td>
-                        </tr>
-						<tr>
-							<td>  </td>
-							<td> 100 mbps </td>
-							<td> Gcash </td>
-							<td> Inactive </td>
-							<td> 08/22/2025 </td>
-							<td> ₱1300 </td>
-        				    <td> Paid </td>
-                        </tr>
+					<?php
+					$query = "SELECT * FROM payment";
+
+					$result = mysqli_query($connection, $query);
+
+					if (!$result) {
+						die("Query failed: " . mysqli_error($connection));
+					} 
+					else {
+						
+					while($row = mysqli_fetch_assoc($result)){
+						?>
+					<tr>
+						<td> <?php echo $row['id'];?> </td>
+						<td> <?php echo $row['plan'];?> </td>
+						<td> <?php echo $row['payment_method'];?> </td>
+						<td> <?php echo $row['status'];?> </td>
+						<td> <?php echo $row['due_date'];?> </td>
+						<td> <?php echo $row['amount'];?> </td>
+						<td> <?php echo $row['remarks'];?> </td>
+                    </tr>
+					
+						<?php
+					}
+					}
+					?>
 </table>
 </div>
-        
-
 </body>
 </html>
