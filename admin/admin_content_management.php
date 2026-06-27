@@ -10,16 +10,38 @@
 </head>
 <body>
 		<?php include 'admin_sidebar_header_profile.php'; ?>
+		  <h1>User Management Tracking</h1>
 
-		<div class = content_container>
-			<form action="">
-				 <label>Business Name:</label>
-                <input type="text" name="business_name" >
+		<div class="content-management-container">
 
-				 <label>Business Address:</label>
-                <input type="text" name="business_addresss" >
-            </div>
-			</form>
-		</div>
+    <div class="content-wrapper">
+
+        <div class="business-info-card">
+            <label>Business Name</label>
+            <input type="text" value="business_name">
+
+            <label>Business Address</label>
+            <input type="text" value="business_address">
+
+            <label>Contact Number</label>
+            <input type="text" value="contact_number">
+
+            <label>Business Email</label>
+            <input type="text" value="business_email">
+
+            <button type="button">Edit</button>
+        </div>	
+
+		<div class ="internet_plan">
+				<label > INTERNET PLANS</label><br>
+				<a href="admin_edit_internet_plan.php"><button>Edit</button></a>
+			
+			</div>
+			
+
+    </div>
+	
+</div>
+			
 </body>
 </html>

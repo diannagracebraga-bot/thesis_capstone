@@ -1,0 +1,53 @@
+.content-management-container {
+    width: 75%;
+    height: 100vh;
+    margin: auto ;
+    border-radius: 50px;
+    border: 2px solid black;
+    padding: 20px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.business-info-card {
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background: lightblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.internet_plan {
+    width: 35%;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.business-info-card input {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.business-info-card button {
+    background-color: pink;
+    border-radius: 5px;
+    width: 30%;
+    margin: 15px auto 0;
+}
+.business-info-card button:hover{
+    background-color: aqua;
+}
+.internet_plan{
+   background-color: lightblue;
+    width: 40%;
+    padding: 20px;
+}
