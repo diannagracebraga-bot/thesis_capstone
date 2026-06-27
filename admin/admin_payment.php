@@ -21,7 +21,8 @@ include '../database/database_payment.php';
 
 				<div class = "payment-plus">
                     <form action="admin_add_payment.php" method="get"> 
-                    <button class= "payment-plus" >Add customer payment</button>
+                    <button class= "payment-plus" >Add customer</button>
+</form>
                 </div>
 				          
         </div>
@@ -31,15 +32,18 @@ include '../database/database_payment.php';
 					<tr>
 						<th> ID </th>
 						<th> PLAN </th>
+						<th> FIRST NAME </th>
+						<th> MIDDLE NAME </th>
+						<th> LAST NAME </th>
 						<th> PAYMENT METHOD </th>
-						<th> STATUS </th>
 						<th> DUE DATE </th>
 						<th> AMOUNT </th>
 						<th> REMARKS </th>
+						<th> ACTION </th>
 					</tr>
 					</thead>
 					<?php
-					$query = "SELECT * FROM payment";
+					$query = "SELECT * FROM payment_tbl";
 
 					$result = mysqli_query($connection, $query);
 
@@ -53,8 +57,10 @@ include '../database/database_payment.php';
 					<tr>
 						<td> <?php echo $row['id'];?> </td>
 						<td> <?php echo $row['plan'];?> </td>
+						<td> <?php echo $row['f_name'];?> </td>
+						<td> <?php echo $row['m_name'];?> </td>
+						<td> <?php echo $row['l_name'];?> </td>
 						<td> <?php echo $row['payment_method'];?> </td>
-						<td> <?php echo $row['status'];?> </td>
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
@@ -63,7 +69,7 @@ include '../database/database_payment.php';
 						<?php
 					}
 					}
-					?>
+ ?>
 </table>
 </div>
 </body>
