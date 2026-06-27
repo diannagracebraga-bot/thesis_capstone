@@ -22,6 +22,7 @@ include '../database/database_payment.php';
 				<div class = "payment-plus">
                     <form action="admin_add_payment.php" method="get"> 
                     <button class= "payment-plus" >Add customer</button>
+</form>
                 </div>
 				          
         </div>

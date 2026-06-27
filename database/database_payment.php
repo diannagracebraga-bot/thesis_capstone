@@ -6,4 +6,7 @@ define("DATABASE", "capstone_thesis");
 
 $connection = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DATABASE);
 
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>
