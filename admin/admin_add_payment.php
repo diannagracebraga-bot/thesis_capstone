@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="form_group">
-                <label>Due Date</label>
+                <label>Due Datesss</label>
                 <input type="date" name="d_date" required>
             </div>
 
