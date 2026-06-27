@@ -102,6 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="payment-plus">
                     Add Customer
                 </button>
+                
             </div>
 
         </div>

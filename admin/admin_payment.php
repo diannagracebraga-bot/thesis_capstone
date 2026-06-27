@@ -64,6 +64,7 @@ include '../database/database_payment.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
+						$search_icon = '<i class="fa fa-search"></i> Search';
                     </tr>
 					
 						<?php
