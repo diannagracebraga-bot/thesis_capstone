@@ -101,7 +101,7 @@ body{
 
 .payment-form{
     flex:2;
-    background:white;
+    background:hsl(0, 0%, 100%);
     padding:25px;
     border-radius:10px;
     box-shadow:0 2px 10px rgba(0,0,0,.08);

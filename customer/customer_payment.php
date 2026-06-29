@@ -37,7 +37,7 @@
     
     <div class="content">
 
-        <h1>Payment Center</h1>
+        <h1>Payment Centerr</h1>
 
         
         <div class="payment-container">
