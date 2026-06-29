@@ -97,7 +97,7 @@
                     <textarea></textarea>
                 </div>
 
-                <button class="submit-btn">Submit</button>
+                <button class="submit-btn">Submitt</button>
 
             </div>
 
