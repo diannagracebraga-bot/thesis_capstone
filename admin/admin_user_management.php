@@ -14,44 +14,6 @@ $page = $_GET['page'] ?? 'users';
 </head>
 <body>
 
-<<<<<<< HEAD
-				<div class = "payment-plus">
-                     <form action="admin_add_payment.php" method="get">
-                    <button type= "submit">Add customer</button>
-                </div>
-				          
-        </div>
-		<br>
-				<table class = "table_applicants">
-					<thead>
-					<tr>
-						<th> ID </th>
-						<th> NAME </th>
-						<th> ROLE </th>
-						<th> STATUS </th>
-						<th> ACTION </th>
-					</tr>
-					</thead>
-						<tr>
-							<td> 1 </td>
-							<td> Noel </td>
-							<td> Admin </td>
-							<td> Active</td>
-							<td><button><img src="../images/deact.png" class="icon"></img></button>
-						<button><img src="../images/edit.png" class="icon" ></img></button></td>
-                        </tr>
-						<tr>
-							<td> 2 </td>
-							<td> Dianna </td>
-							<td> Customer </td>
-							<td> Inactive </td>
-                        </tr>
-</table>
-						
-</table>
-</div>
-        
-=======
     <?php include 'admin_sidebar_header_profile.php'; ?>
 
     <h1>User Management Tracking</h1>
@@ -99,6 +61,5 @@ $page = $_GET['page'] ?? 'users';
 
     </div>
 
->>>>>>> 914a78236fe2741a9f6f48006131c457f8cf1a9b
 </body>
 </html>

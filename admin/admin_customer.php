@@ -25,7 +25,7 @@
         <input type="hidden" name="page" value="add_customer">
         <button type="submit">Add Customer</button>
     </form>
-</div>
+</div> 
   		  </div>
 
                 <br>
