@@ -79,7 +79,7 @@
                 <label>Account Status</label>
                 <input type="text" value="Active">
 
-                <button class="update-btn">Update Profile</button>
+                <button class="update-btn">Updatee Profile</button>
 
             </div>
 
