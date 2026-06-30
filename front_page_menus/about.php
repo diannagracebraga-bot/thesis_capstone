@@ -1,3 +1,11 @@
+<?php
+include '../database/database_connection.php';
+
+$sql = "SELECT * FROM content_management_about_tbl WHERE about_id = 1";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,23 +40,19 @@
 		</div>
 
 		<div class= "pad">
-			<h1>MITZTIANPC WIRED INTERNET SERVICE</h1>
+			<h1><?php echo $row['business_name']; ?></h1>
 			<h3>ALWAYS CONNECTED</h3>
-			<p>Quality products help to maintain customer 
-				satisfaction and loyalty and reduce the risk and
-				cost of replacing faulty goods. Companies can build a 
-				reputation for quality by gaining accreditation with 
-				a recognized quality standard.</p>
+			<p><?php echo $row ['business_description'];?></p>
 			<h1>CONTACT</h1>
 			<div class= "details">
 			<img src="../images/mail.png" alt="mail">
-			<p>mpcwiredinternetservice@gmail.com</p>
+			<p><?php echo $row ['business_email'];?></p>
 			<img src="../images/phone.png" alt="phone">
-			<p>0926 646 8174</p>
+			<p><?php echo $row ['business_contact'];?></p>
 			<img src="../images/fb.png" alt="fb">
-			<p>Mpc Wired Internet Services</p>
+			<p><?php echo $row ['business_social_media'];?></p>
 			<img src="../images/location.png" alt="location">
-			<p>B25 L13 Carissa Homes Tanza, Cavite</p>
+			<p><?php echo $row ['business_address'];?></p>
 			</div>
 		</div>
 		<!--<div class="bottom-header"></div>-->

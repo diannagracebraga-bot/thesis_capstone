@@ -4,16 +4,18 @@ include '../database/database_payment.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $plan = $_POST['Plan'];
-    $payment_method = $_POST['Payment_Method'];
-    $status = $_POST['status'];
-    $due_date = $_POST['d_date'];
+    $f_name = $_POST['f_name'];
+    $m_name = $_POST['m_name'];
+    $l_name = $_POST['l_name'];
+    $payment_method = $_POST['payment_method'];
+    $due_date = $_POST['due_date'];
     $remarks = $_POST['remarks'];
     $amount = $_POST['amount'];
 
-    $query = "INSERT INTO payment
-              (plan, payment_method, status, due_date, remarks, amount)
+    $query = "INSERT INTO payment_tbl
+              (plan, f_name, m_name, l_name, payment_method, due_date, remarks, amount)
               VALUES
-              ('$plan','$payment_method', '$status', '$due_date', '$remarks', '$amount')";
+              ('$plan','$f_name','$m_name','$l_name','$payment_method', '$due_date', '$remarks', '$amount')";
 
     $result = mysqli_query($connection, $query);
 
@@ -36,9 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="../css/admin_add_payment.css">
     <title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
-<body>
-		<?php include 'admin_sidebar_header_profile.php'; ?>
-	
+<body>    <?php include 'admin_sidebar_header_profile.php'; ?>
+
 <div class="add_payment">
     <h3>Add Payment</h3>
 
@@ -55,13 +56,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <option>250 mbps</option>
             </select>
         </div>
-
         <div class="form_grid">
-
-    
+            <div class="form_group">
+                <label>First Name</label>
+                <input type="text" name="f_name" required>
+            </div>
+            <div class="form_group">
+                <label>Middle Name</label>
+                <input type="text" name="m_name" required>
+            </div>
+            <div class="form_group">
+                <label>Last Name</label>
+                <input type="text" name="l_name" required>
+            </div>
             <div class="form_group">
                 <label>Payment Method</label>
-                <select name="Payment_Method" required>
+                <select name="payment_method" required>
                     <option value="">-- Select --</option>
                     <option>Cash</option>
                     <option>Gcash</option>
@@ -70,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="form_group">
                 <label>Due Datesss</label>
-                <input type="date" name="d_date" required>
+                <input type="date" name="due_date" required>
             </div>
 
             <div class="form_group">
@@ -91,6 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="payment-plus">
                     Add Customer
                 </button>
+                
             </div>
 
         </div>

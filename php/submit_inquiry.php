@@ -1,10 +1,10 @@
 <?php
 include '../database/database_connection.php';
 
-$name = mysqli_real_escape_string($conn, $_POST['name']);
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$contact = mysqli_real_escape_string($conn, $_POST['contact']);
-$description = mysqli_real_escape_string($conn, $_POST['description']);
+$name = $_POST['name'];
+$email = $_POST['email'];
+$contact =$_POST['contact'];
+$description =$_POST['description'];
 $date = date("Y-m-d H:i:s");
 $status = "Pending";
 
@@ -19,6 +19,6 @@ if(mysqli_query($conn, $sql)){
             window.location='../front_page_menus/inquire.php';
           </script>";
 }else{
-    echo "Error: " . mysqli_error($conn);
+    echo "Failed to Submit inquiry " . mysqli_error($conn);
 }
 ?>

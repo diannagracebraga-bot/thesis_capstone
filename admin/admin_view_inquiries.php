@@ -3,11 +3,11 @@ include '../database/database_connection.php';
 
 if(isset($_POST['status'])){
     $new_status = $_POST['status'];
-    $id = $_GET['id'];
+    $inquiries_id = $_GET['inquiries_id'];
 
     $sql_update = "UPDATE inquiries_tbl 
                    SET status='$new_status' 
-                   WHERE id='$id'";
+                   WHERE inquiries_id='$inquiries_id'";
 
     mysqli_query($conn, $sql_update);
 
@@ -15,9 +15,9 @@ if(isset($_POST['status'])){
     exit();
 }
 
-$id = $_GET['id'];
+$inquiries_id = $_GET['inquiries_id'];
 
-$sql = "SELECT * FROM inquiries_tbl WHERE id = '$id'";
+$sql = "SELECT * FROM inquiries_tbl WHERE inquiries_id = '$inquiries_id'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 ?>

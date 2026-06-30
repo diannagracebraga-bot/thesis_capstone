@@ -1,3 +1,10 @@
+<?php
+include '../database/database_connection.php';
+
+$sql = "SELECT * FROM internet_plan_tbl ORDER BY plan_id ASC";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,35 +36,23 @@
     </div>
 
 <section class="plans">
-    <div class="plan-card">
-        <h3>50 Mbps</h3>
-        <h2>₱800 / Month</h2>
-        <button>APPLY NOW</button>
-    </div>
+
+<?php while($row = mysqli_fetch_assoc($result)){ ?>
 
     <div class="plan-card">
-        <h3>100 Mbps</h3>
-        <h2>₱1000 / Month</h2>
+
+        <h3><?php echo $row['internet_mbps']; ?> Mbps</h3>
+
+        <h2>
+            ₱<?php echo number_format($row['internet_price']); ?> / Month
+        </h2>
+
         <button>APPLY NOW</button>
+
     </div>
 
-    <div class="plan-card">
-        <h3>150 Mbps</h3>
-        <h2>₱1200/ Month</h2>
-        <button>APPLY NOW</button>
-    </div>
+<?php } ?>
 
-    <div class="plan-card">
-        <h3>200 Mbps</h3>
-        <h2>₱1500/ Month</h2>
-        <button>APPLY NOW</button>
-    </div>
-
-    <div class="plan-card">
-        <h3>250 Mbps</h3>
-        <h2>₱2499/ Month</h2>
-        <button>APPLY NOW</button>
-    </div>
 </section>
            <!--  <div class="bottom-header"></div>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

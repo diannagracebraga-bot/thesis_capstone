@@ -46,14 +46,14 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_assoc($result)) {
 ?>
     <tr>
-        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['inquiries_id']; ?></td>
         <td><?php echo $row['full_name']; ?></td>
         <td><?php echo $row['email_address']; ?></td>
         <td><?php echo $row['contact_number']; ?></td>
         <td><?php echo $row['date_received']; ?></td>
         <td><?php echo $row['status']; ?></td>
         <td>
-            <a href="admin_view_inquiries.php?id=<?php echo $row['id']; ?>">
+            <a href="admin_view_inquiries.php?inquiries_id=<?php echo $row['inquiries_id']; ?>">
                 <button class="img-btn"> <img src="../images/view_icon.png">
 					</button>
             </a>
