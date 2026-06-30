@@ -41,6 +41,7 @@ include '../database/database_payment.php';
 						<th> REMARKS </th>
 						<th> ACTION </th>
 					</tr>
+					
 					</thead>
 					<?php
 					$query = "SELECT * FROM payment_tbl";
@@ -64,13 +65,17 @@ include '../database/database_payment.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
-						$search_icon = '<i class="fa fa-search"></i> Search';
+						<td> <button class = "btn btn-primary"><a href=""></a>update</button>
+						     <button class = "btn btn-danger" class= "text-light><a href=""></a>delete</button>
+                        </td>
                     </tr>
+					
 					
 						<?php
 					}
 					}
  ?>
+ 
 </table>
 </div>
 </body>

@@ -10,7 +10,7 @@
 }
  .table_applicants{
     width: 90%;
-    margin: auto;
+    margin-right: 100px;
     border-collapse: collapse;
 }
 .payment-plus{
