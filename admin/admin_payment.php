@@ -65,8 +65,13 @@ include '../database/database_payment.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
+<<<<<<< HEAD
 						<td>  <a href="admin_inquiries.php"><button class = "btn btn-primary">>update</button></a>
 						     <button class = "btn btn-danger" class= "text-light><a href=""></a>delete</button>
+=======
+						<td> <a href="update.php"><button class = "btn btn-primary">update</button></a>
+							 <a href="delete.php"><button class = "btn btn-primary">delete</button></a>
+>>>>>>> ba7ff6b8c469a8b48516d2139d98c6347bd35a64
                         </td>
                     </tr>
 					

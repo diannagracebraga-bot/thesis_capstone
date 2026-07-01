@@ -15,13 +15,7 @@
             <img src="images/logo.png" alt="Logo">
         </div>
 
-        <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="payment.html">Payments</a></li>
-            <li class="active"><a href="support.html">Support</a></li>
-            <li><a href="ticket.html">Ticket</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
+        
 
     </div>
 
