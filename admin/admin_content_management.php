@@ -63,47 +63,79 @@ if(isset($_POST['save_plans'])){
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/admin_content_management.css">   
     <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
-	<link rel="stylesheet" href="../css/admin_content_management.css">
-	<title></title>
+	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>
 		<?php include 'admin_sidebar_header_profile.php'; ?>
 		  <h1>User Management Tracking</h1>
 
 		<div class="content-management-container">
-    <form method="POST">
+   <form method="POST" class="form-horizontal">
     <div class="content-wrapper">
-
-
+        
         <div class="business-info-card">
-           <label>BUSINESS NAME:</label>
-           <input type="text" name="business_name"
-           value="<?php echo $row['business_name']; ?>">
-            
-           <label>BUSINESS EMAIL:</label>
-           <input type="text" name="business_email"
-           value="<?php echo $row['business_email']; ?>">
+<a href="#" class="badge badge-primary">Primary</a>
+            <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">BUSINESS NAME:</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="business_name"
+                           value="<?php echo $row['business_name']; ?>">
+                </div>
+            </div>
 
-           <label>BUSINESS CONTACT NUMBER:</label>
-           <input type="number" name="business_contact"
-           value="<?php echo $row['business_contact']; ?>">
+            <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">BUSINESS EMAIL:</label>
+                <div class="col-sm-7">
+                    <input type="email" class="form-control" name="business_email"
+                           value="<?php echo $row['business_email']; ?>">
+                </div>
+            </div>
 
-           <label>BUSINESS FACEBOOK PAGE:</label>
-           <input type="text" name="business_social_media"
-           value="<?php echo $row['business_social_media']; ?>">
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label">BUSINESS CONTACT NUMBER:</label>
+                <div class="col-sm-7">
+                    <input type="number" class="form-control" name="business_contact"
+                           value="<?php echo $row['business_contact']; ?>">
+                </div>
+            </div>
 
-           <label>BUSINESS ADDRESS:</label>
-           <input type="text" name="business_address"
-           value="<?php echo $row['business_address']; ?>">
+            <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">BUSINESS FACEBOOK PAGE:</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="business_social_media"
+                           value="<?php echo $row['business_social_media']; ?>">
+                </div>
+            </div>
 
-           <label>BUSINESS DESCRIPTION:</label>
-           <input type="text" name="business_description"
-           value="<?php echo $row['business_description']; ?>">
+            <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">BUSINESS ADDRESS:</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="business_address"
+                           value="<?php echo $row['business_address']; ?>">
+                </div>
+            </div>
 
-        <button type="submit" name="update">Save</button>
-        </div>	
+            <div class="form-group row mb-4">
+                <label class="col-sm-2 col-form-label">BUSINESS DESCRIPTION:</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="business_description"
+                           value="<?php echo $row['business_description']; ?>">
+                </div>
+            </div>
+<br>
+            <div class="form-group row">
+                <div class="col-sm-9 offset-sm-6">
+                    <button type="submit" name="update" class="btn btn-success">
+                        Save
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </form>
 <form method="POST" class="plan-container">
 

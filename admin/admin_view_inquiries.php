@@ -27,7 +27,7 @@ $row = mysqli_fetch_assoc($result);
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 	<link rel="stylesheet" href="../css/admin_view_inquiries.css">
     <title></title>
@@ -54,7 +54,7 @@ $row = mysqli_fetch_assoc($result);
 
     <div class="action"><br>
         <label>Action</label>
-        <button type="submit" class="action-btn">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
 </form>
         </div>
