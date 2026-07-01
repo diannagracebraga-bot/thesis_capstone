@@ -14,6 +14,7 @@
         <div class="header">
         </div>
             <h1>USER MANAGEMENT TRACKING</h1>
+            
 			<div class = "table-container1">
     <div class = "aligned" >
         <div class="searchbar-container">
