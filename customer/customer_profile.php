@@ -4,37 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Profile</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../css/customer_profile.css">
 </head>
 
 <body>
-
-
-<div class="sidebar">
-
-    <div class="logo">
-        <img src="C:\Users\MWBPI-HP-25-14\Documents\GitHub\thesis_capstone\images\bg_logo.png" alt="Logo">
-    </div>
-
-    <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="payment.html">Payment</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="ticket.html">Ticket</a></li>
-        <li class="active"><a href="profile.html">Profile</a></li>
-    </ul>
-
-</div>
-
-
-<div class="main">
-
-    
-    <div class="navbar">
-        <div class="user">Customer</div>
-    </div>
-
-    
+     <?php include 'customer_sidebar_header.php'; ?>  
     <div class="content">
 
         <h1>My Profile</h1>
