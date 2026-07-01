@@ -18,7 +18,7 @@
         <button class="profile-button">
                 <div class="profile-container">
                         <div class="profile-name"> Dianna Braga </div>
-                        <div class="profile-role"> Admin </div>
+                        <div class="profile-role"> Customer </div>
                         </div>
         </button>
         </header>
