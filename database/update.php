@@ -23,9 +23,9 @@ if(isset($_POST['update'])) {
     $query = "UPDATE payment_tbl SET plan='$plan', f_name='$f_name', m_name='$m_name', l_name='$l_name', payment_method='$payment_method', due_date='$due_date', amount='$amount', remarks='$remarks' WHERE id='$id'";
 
     if (mysqli_query($conn, $query)) {
-        echo "<script>alert('Record updated successfully.'); window.location.href='admin_payment.php';</script>";
+        echo "<script>alert('Record updated successfully.'); window.location.href='../admin/admin_payment.php';</script>";
     } else {
-        echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='admin_payment.php';</script>";
+        echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='../admin/admin_payment.php';</script>";
     }
 }
 ?>
@@ -33,12 +33,13 @@ if(isset($_POST['update'])) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Update Payment</title>
+    <title>UPDATE PAYMENT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin_update_payment.css">
 </head>
 <body>
 <div class="container mt-5">
-<h2>Update Payment</h2>
+<h2>UPDATE PAYMENT</h2>
 <form method="POST">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
     <div class="mb-3">
@@ -93,7 +94,7 @@ if(isset($_POST['update'])) {
     <button type="submit" name="update" class="btn btn-primary">
         Update Payment
     </button>
-    <a href="admin_payment.php" class="btn btn-secondary">
+    <a href="../admin/admin_payment.php" class="btn btn-secondary">
         Cancel
     </a>
 </form>
