@@ -63,25 +63,13 @@ include '../database/database_connection.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
-<<<<<<< HEAD
 						<td> <a href="../database/update.php?id=<?php echo $row['id']; ?>"> 
 							<button class = "btn btn-primary">update</button>
 						     </a>
 							 <a href="../database/delete.php?id=<?php echo $row['id']; ?>">
 								<button class = "btn btn-primary">delete</button>
 							 </a>
-=======
-<<<<<<< HEAD
-						<td> <a href="update.php"><button class = "btn btn-primary">update</button></a>
-							 <a href="delete.php"><button class = "btn btn-primary">delete</button></a>
-=======
-						<td> <a href="update.php?id=<?php echo $row['id']; ?>">
-							<button class = "btn btn-primary">update</button>
-						     </a>
-							 <a href="delete.php?id=<?php echo $row['id']; ?>"><button class = "btn btn-primary">delete</button></a>
->>>>>>> dddc624428e4ac5674813c43fbebf812cca1b0d0
->>>>>>> 4479878975b06c604eb020d6ed3ea994795320de
-                        </td>
+						</td>
                     </tr>
 						<?php
 					}
