@@ -15,23 +15,59 @@
             <h2>Welcome, Dianna Braga</h2>
             <p><strong>Account No:</strong> MTZ-10027</p>
         </div>
-        <div class="plan-card">
-            <h3>Plan:</h3>
-            <h2>₱800</h2>
-            <p>50 Mbps</p>
+        <div class="right-top">
+            <div class="date-card">
+                <p>Tuesday</p>  
+                <h3>July 1, 2026</h3>
+            </div>
+            <div class="plan-card">
+                <h3>Current Plan</h3>
+                <h2>₱800</h2>
+                <p>50 Mbps</p>
+            </div>
+
         </div>
     </div>
+    <div class="summary">
+        <div class="card">
+            <h4>Current Balance</h4>
+            <span>₱0.00</span>
+        </div>
+        <div class="card">
+            <h4>Service Status</h4>
+            <span class="online">● Connected</span>
+        </div>
+        <div class="card">
+            <h4>Paid Bills</h4>
+            <span>15</span>
+        </div>
+        <div class="card">
+            <h4>Next Due Date</h4>
+            <span>July 15, 2026</span>
+        </div>
+    </div>
+    <div class="announcement">
+        <h3>Latest Announcement</h3>
+        <p>
+            Scheduled maintenance on July 10, 2026 from
+            12:00 AM - 4:00 AM.
+        </p>
+    </div>
     <div class="payment-box">
-         <div class="table-header">
-        <h3>Payment History</h3>
-         
+        <div class="payment-header">
+            <h3>Payment History</h3>
+            <input
+                type="text"
+                placeholder="Search payment..."
+            >
+        </div>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Date</th>
                     <th>Payment</th>
-                    <th>Payment Method</th>
+                    <th>Method</th>
                     <th>Status</th>
                     <th>SOA</th>
                 </tr>
@@ -42,21 +78,28 @@
                     <td>05-12-2026</td>
                     <td>₱800</td>
                     <td>Cash</td>
-                    <td class="status">Paid</td>
+                    <td>Paid</td>
                     <td>
-                        <button class="download">Download</button>
+                        <button class="download">
+                            Download
+                        </button>
                     </td>
                 </tr>
 
                 <tr>
+
                     <td>028</td>
                     <td>04-12-2026</td>
                     <td>₱800</td>
                     <td>QR PH</td>
-                    <td class="status">Paid</td>
+                    <td>Paid</td>
+
                     <td>
-                        <button class="download">Download</button>
+                        <button class="download">
+                            Download
+                        </button>
                     </td>
+
                 </tr>
 
             </tbody>
@@ -66,6 +109,5 @@
     </div>
 
 </div>
-
 </body>
 </html>

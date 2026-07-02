@@ -9,10 +9,9 @@
 
 <body>
     <header class="top-bar">
-        <div class="search-container1">
-        <form action="/admin_customer.php" method="GET">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Search</button>
+       <form action="/admin_customer.php" method="GET">
+                
+            
         </form>
         </div>
         <button class="profile-button">
