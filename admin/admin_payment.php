@@ -1,5 +1,5 @@
 <?php
-include '../database/database_payment.php';
+include '../database/database_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +20,11 @@ include '../database/database_payment.php';
                 <button type="submit">Search</button>
 
 				<div class = "payment-plus">
-                    <form action="admin_add_payment.php" method="get"> 
-                    <button class= "payment-plus" >Add customer</button>
-</form>
+                    <form action="admin_add_payment.php" method="get">
+						<button type="submit" class="btn btn-success">
+							Add Customer
+						</button>
+					</form>
                 </div>
 				          
         </div>
@@ -45,14 +47,11 @@ include '../database/database_payment.php';
 					</thead>
 					<?php
 					$query = "SELECT * FROM payment_tbl";
-
-					$result = mysqli_query($connection, $query);
-
+					$result = mysqli_query($conn, $query);
 					if (!$result) {
-						die("Query failed: " . mysqli_error($connection));
+						die("Query failed: " . mysqli_error($conn));
 					} 
 					else {
-						
 					while($row = mysqli_fetch_assoc($result)){
 						?>
 					<tr>
@@ -65,13 +64,10 @@ include '../database/database_payment.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
-<<<<<<< HEAD
-						<td>  <a href="admin_inquiries.php"><button class = "btn btn-primary">>update</button></a>
-						     <button class = "btn btn-danger" class= "text-light><a href=""></a>delete</button>
-=======
-						<td> <a href="update.php"><button class = "btn btn-primary">update</button></a>
-							 <a href="delete.php"><button class = "btn btn-primary">delete</button></a>
->>>>>>> ba7ff6b8c469a8b48516d2139d98c6347bd35a64
+						<td> <a href="update.php?id=<?php echo $row['id']; ?>">
+							<button class = "btn btn-primary">update</button>
+						     </a>
+							 <a href="delete.php?id=<?php echo $row['id']; ?>"><button class = "btn btn-primary">delete</button></a>
                         </td>
                     </tr>
 					

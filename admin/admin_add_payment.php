@@ -1,5 +1,5 @@
 <?php
-include '../database/database_payment.php';
+include '../database/database_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -17,13 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               VALUES
               ('$plan','$f_name','$m_name','$l_name','$payment_method', '$due_date', '$remarks', '$amount')";
 
-    $result = mysqli_query($connection, $query);
+    $result = mysqli_query($conn, $query);
 
     if ($result) {
         header("Location: admin_payment.php");
         exit();
     } else {
-        echo "Insert failed: " . mysqli_error($connection);
+        echo "Insert failed: " . mysqli_error($conn);
     }
 }
 ?>
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="form_group">
             <label>Plan</label>
-            <select name="Plan" required>
+            <select name="plan" required>
                 <option value="">-- Select --</option>
                 <option>50 mbps</option>
                 <option>100 mbps</option>
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="form_group full_width">
-                <button type="submit" class="payment-plus">
+                <button type="submit" name="add" class="payment-plus">
                     Add Customer
                 </button>
                 
