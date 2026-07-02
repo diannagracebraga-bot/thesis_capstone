@@ -96,6 +96,7 @@ if(isset($_POST['update'])) {
     </button>
     <a href="../admin/admin_payment.php" class="btn btn-secondary">
         Cancel
+        
     </a>
 </form>
 </div>
