@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}.top-bar {
+    background: #004AAD;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+.profile-button {
+    display: flex;
+    padding: 6px 6px 6px 12px;
+    background: pink;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    border: 1px solid;
+}
+.sidebar a{
+    display: block;
+    color: black    ;
+    padding: 12px;
+    text-decoration: none;
+
+}
+.sidebar a:hover{
+    background-color: #E5E4E2;
+     color: rgb(61, 113, 130);   }
+.icon2{
+    width:60px;
+    height: 60px;
+    margin-left:70px;
+    margin-top: 50px
+}
+
+
+
+
+
+

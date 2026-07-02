@@ -4,29 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support</title>
-    <link rel="stylesheet" href="support.css">
+    <link rel="stylesheet" href="../css/customer_support.css">
 </head>
 <body>
 
-    
-    <div class="sidebar">
-
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo">
-        </div>
-
-        
-
-    </div>
+    <?php include 'customer_sidebar_header.php'; ?>
 
     
-    <div class="main">
-
-        
-        <div class="navbar">
-            <button class="user-btn">User</button>
-        </div>
-
         
         <div class="content">
 

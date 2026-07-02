@@ -73,7 +73,7 @@ if(isset($_POST['update'])){
                            value="<?php echo $row['business_name']; ?>">
                 </div>
             </div>
-
+<br>
             <div class="form-group row mb-4">
                 <label class="col-sm-2 col-form-label">BUSINESS EMAIL:</label>
                 <div class="col-sm-7">

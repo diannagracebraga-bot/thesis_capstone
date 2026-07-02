@@ -1,5 +1,5 @@
 <?php
-include '../database/database_payment.php';
+include '../database/database_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +18,12 @@ include '../database/database_payment.php';
         <div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
-
 				<div class = "payment-plus">
-                    <form action="admin_add_payment.php" method="get"> 
-                    <button class= "payment-plus" >Add customer</button>
-</form>
+                    <form action="admin_add_payment.php" method="get">
+						<button type="submit" class="btn btn-success">
+							Add Customer
+						</button>
+					</form>
                 </div>
 				          
         </div>
@@ -45,14 +46,11 @@ include '../database/database_payment.php';
 					</thead>
 					<?php
 					$query = "SELECT * FROM payment_tbl";
-
-					$result = mysqli_query($connection, $query);
-
+					$result = mysqli_query($conn, $query);
 					if (!$result) {
-						die("Query failed: " . mysqli_error($connection));
+						die("Query failed: " . mysqli_error($conn));
 					} 
 					else {
-						
 					while($row = mysqli_fetch_assoc($result)){
 						?>
 					<tr>
@@ -65,8 +63,15 @@ include '../database/database_payment.php';
 						<td> <?php echo $row['due_date'];?> </td>
 						<td> <?php echo $row['amount'];?> </td>
 						<td> <?php echo $row['remarks'];?> </td>
+<<<<<<< HEAD
 						<td> <a href="update.php"><button class = "btn btn-primary">update</button></a>
 							 <a href="delete.php"><button class = "btn btn-primary">delete</button></a>
+=======
+						<td> <a href="update.php?id=<?php echo $row['id']; ?>">
+							<button class = "btn btn-primary">update</button>
+						     </a>
+							 <a href="delete.php?id=<?php echo $row['id']; ?>"><button class = "btn btn-primary">delete</button></a>
+>>>>>>> dddc624428e4ac5674813c43fbebf812cca1b0d0
                         </td>
                     </tr>
 					

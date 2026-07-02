@@ -4,34 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tickets</title>
-    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="../css/customer_ticket.css">
 </head>
 <body>
+<?php include 'customer_sidebar_header.php'; ?>
 
-    
-    <div class="sidebar">
-
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo">
-        </div>
-
-        <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="payment.html">Payment</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li class="active"><a href="ticket.html">Ticket</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-
-    </div>
-
-    
-    <div class="main">
-
-        
-        <div class="navbar">
-            <button class="user-btn">User</button>
-        </div>
 
         
         <div class="content">
