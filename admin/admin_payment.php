@@ -18,7 +18,6 @@ include '../database/database_connection.php';
         <div class="searchbar-container">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Search</button>
-
 				<div class = "payment-plus">
                     <form action="admin_add_payment.php" method="get">
 						<button type="submit" class="btn btn-success">
