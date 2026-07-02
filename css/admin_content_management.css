@@ -1,34 +1,56 @@
 .content-management-container {
     width: 75%;
-    height: 100vh;
-    margin: auto ;
+    margin: auto;
     border-radius: 50px;
     border: 2px solid black;
     padding: 20px;
 }
 .business-info-card{
-    background-color: whitesmoke;
+    background-color: #e9eaec;
     padding: 50px;
     border-radius: 15px;
     box-shadow: 5px 5px lightgray;
     
 }
 .business-info-card .col-sm-2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial;
     font-size: large;
 }
 .business-info-card .form-control{
     border: 2px solid lightgray;  
     font-family: sans-serif;
 }
-.business-info-card button{
-    width: 30%;
+.save-btn{
+    width: 35%;
+
 }
 .form-group.row {
     justify-content: center;
 }
 .badge{
     background-color: blue;
+}
+.edit-btn{
+    width: 20%;
+}
+.business-info-card h1{
+    text-align: left;
+}
+.pill-nav a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.pill-nav a:hover {
+  background-color:gray;
+  color: black;
+}
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
 }
 /*
 
