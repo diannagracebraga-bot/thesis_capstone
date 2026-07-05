@@ -35,7 +35,6 @@ $row = mysqli_fetch_assoc($result);
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
        
-      <h1>User Management Tracking</h1>
 <div class="form_container">
 
     <div class="container">

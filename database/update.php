@@ -23,9 +23,9 @@ if(isset($_POST['update'])) {
     $query = "UPDATE payment_tbl SET plan='$plan', f_name='$f_name', m_name='$m_name', l_name='$l_name', payment_method='$payment_method', due_date='$due_date', amount='$amount', remarks='$remarks' WHERE id='$id'";
 
     if (mysqli_query($conn, $query)) {
-        echo "<script>alert('Record updated successfully.'); window.location.href='admin_payment.php';</script>";
+        echo "<script>alert('Record updated successfully.'); window.location.href='../admin/admin_payment.php';</script>";
     } else {
-        echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='admin_payment.php';</script>";
+        echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='a../admin/dmin_payment.php';</script>";
     }
 }
 ?>
