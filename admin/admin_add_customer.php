@@ -53,7 +53,7 @@
             </div>
 
             <div class="form_group">
-                <label>Gender:</label>
+                <label>Sex:</label>
                 <select name="gender" required>
                     <option value="">-- Select --</option>
                     <option>Male</option>

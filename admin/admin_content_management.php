@@ -5,9 +5,6 @@ $sql = "SELECT * FROM content_management_about_tbl WHERE about_id = 1";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-$sql_plan = "SELECT * FROM internet_plan_tbl";
-$plan_result = mysqli_query($conn, $sql_plan);
-
 if(isset($_POST['update'])){
 
     $business_name = $_POST['business_name'];
@@ -37,25 +34,6 @@ if(isset($_POST['update'])){
                 alert('Update failed!');
               </script>";
     }
-}
-
-if(isset($_POST['save_plans'])){
-
-    foreach($_POST['internet_price'] as $plan_id => $internet_price){
-
-         $mbps = $_POST['internet_mbps'][$plan_id];
-
-        $update = "UPDATE internet_plan_tbl
-           SET internet_price='$internet_price',
-               internet_mbps='$mbps'
-           WHERE plan_id='$plan_id'";
-
-        mysqli_query($conn, $update);}
-    echo "<script>
-            alert('Internet plans updated successfully!');
-            window.location='admin_content_management.php';
-          </script>";
-    exit();
 }?>
 
 <!DOCTYPE html>
@@ -65,19 +43,29 @@ if(isset($_POST['save_plans'])){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/admin_content_management.css">   
-    <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>
 		<?php include 'admin_sidebar_header_profile.php'; ?>
-		  <h1>User Management Tracking</h1>
 
 		<div class="content-management-container">
+
+         <!--<div class="col-sm-9 offset-sm-9 mb-4">
+                  <a href="admin_edit_plan.php">  <button type="submit" name="edit_internet_plan" 
+                  class="btn btn-info edit-btn">
+                        Edit Internet Plan
+                    </button></a>
+    </div>-->
    <form method="POST" class="form-horizontal">
     <div class="content-wrapper">
+
+    <div class="pill-nav offset-sm-9 mb-3">
+         <a class="active" href="admin_content_management.php">Edit Services</a>
+         <a href="admin_edit_plan.php">Edit Internet Plan</a>
+ 
+</div>
         
         <div class="business-info-card">
-<a href="#" class="badge badge-primary">Primary</a>
             <div class="form-group row mb-4">
                 <label class="col-sm-2 col-form-label">BUSINESS NAME:</label>
                 <div class="col-sm-7">
@@ -125,51 +113,19 @@ if(isset($_POST['save_plans'])){
                            value="<?php echo $row['business_description']; ?>">
                 </div>
             </div>
-<br>
+
             <div class="form-group row">
                 <div class="col-sm-9 offset-sm-6">
-                    <button type="submit" name="update" class="btn btn-success">
-                        Save
-                    </button>
+                    <button type="submit" name="update" class="btn btn-success save-btn">Save</button>
                 </div>
             </div>
 
         </div>
     </div>
 </form>
-<form method="POST" class="plan-container">
 
-    <div class="labels">
-        <label>Internet Plan:</label>
-        <label>Mbps:</label>
-    </div>
-
-  <?php while($plan = mysqli_fetch_assoc($plan_result)){ ?>
-
-<div class="plan-row">
-
-    <input
-        type="text"
-        class="plan-input"
-        name="internet_price[<?php echo $plan['plan_id']; ?>]"
-        value="<?php echo $plan['internet_price']; ?>">
-
-    <input
-        type="text"
-        class="mbps-input"
-        name="internet_mbps[<?php echo $plan['plan_id']; ?>]"
-        value="<?php echo $plan['internet_mbps']; ?>">
-
-</div>
-
-<?php } ?>
-    <button type="submit" name="save_plans" class="save-btn">
-        Save
-    </button>
-
-</form>
-
-    </div>
+<br>
+ 
 	
 </div>
 			

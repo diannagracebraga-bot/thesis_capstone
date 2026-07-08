@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support</title>
 
-    <link rel="stylesheet" href="../css/customer_support.css">
+    <link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
+    <link rel="stylesheet" href="../css/customer_support.css?v=3">
     
 </head>
 
@@ -14,11 +15,8 @@
 <?php include 'customer_sidebar_header.php'; ?>
 
 <div class="support-content">
-
     <div class="form-section">
-
         <form class="form-box">
-
             <div class="row">
                 <div class="input-group">
                     <label>Name:</label>
@@ -30,7 +28,6 @@
                     <input type="text">
                 </div>
             </div>
-
             <div class="row">
                 <div class="input-group">
                     <label>Email:</label>
@@ -68,3 +65,6 @@
     </div>
 
 </div>
+
+</body>
+</html>
