@@ -13,6 +13,15 @@
                  <img src="images/bg_logo.png" alt="Logo" class="icon2">
                 <h5>MITZTIANPC WIRED INTERNET SERVICES</h5>
                 </div>
+
+                <script type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
+<script type="module">
+  var myLandbot = new Landbot.Popup({
+    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3474225-XXVB9WE5W6WPVY0W/index.json',
+  });
+</script>
+
+
        
             <div class="dropdown">
                 <button class="dropdown_menu"> <img src="images/hamburger.png" alt="menu icon" class="icon">
@@ -30,6 +39,7 @@
          <h1 class ="center_name">MITZTIANPC WIRED INTERNET</h1>
           <H6 class ="center_lower_name">NOW YOU'RE CONNECTED</H6>
                 
+          
               <div class = "image-container">
                  <img src="images/bg_logo.png" alt="Logo">
               </div>              
