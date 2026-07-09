@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$query = "SELECT * FROM customer_tbl WHERE customer_id = $customer_id";
+$query = "SELECT * FROM customer_profile_tbl WHERE customer_id = $customer_id";
 $result = mysqli_query($conn, $query);
 $customer = mysqli_fetch_assoc($result);
 ?>
