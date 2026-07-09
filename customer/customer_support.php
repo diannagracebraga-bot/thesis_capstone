@@ -1,3 +1,28 @@
+<?php
+include '../database/database_connection.php';
+
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $full_name = mysqli_real_escape_string($conn, $_POST["full_name"]);
+    $email_address = mysqli_real_escape_string($conn, $_POST["email_address"]);
+    $contact_number = mysqli_real_escape_string($conn, $_POST["contact_number"]);
+    $description = mysqli_real_escape_string($conn, $_POST["description"]);
+    $date_received = date("Y-m-d");
+    $status = "Pending";
+
+    $query = "INSERT INTO inquiries_tbl 
+        (full_name, email_address, contact_number, date_received, status, description)
+        VALUES 
+        ('$full_name', '$email_address', '$contact_number', '$date_received', '$status', '$description')";
+
+    if (mysqli_query($conn, $query)) {
+        $message = "Your concern has been submitted.";
+    } else {
+        $message = "Failed to submit concern.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,22 +41,25 @@
 
 <div class="support-content">
     <div class="form-section">
-        <form class="form-box">
+        <?php if ($message !== ""): ?>
+    <p class="support-message"><?php echo $message; ?></p>
+<?php endif; ?>
+        <form class="form-box" method="POST">
             <div class="row">
                 <div class="input-group">
                     <label>Name:</label>
-                    <input type="text">
+                    <input type="text" name="full_name">
                 </div>
 
                 <div class="input-group">
                     <label>Contact Number:</label>
-                    <input type="text">
+                    <input type="text" name="contact_number">
                 </div>
             </div>
             <div class="row">
                 <div class="input-group">
                     <label>Email:</label>
-                    <input type="email">
+                    <input type="email"  name="email_address">
                 </div>
 
                 <div class="input-group">
@@ -54,14 +82,14 @@
 
             <div class="input-group">
                 <label>Description:</label>
-                <textarea placeholder="Describe your concern..."></textarea>
+                <textarea name="description" placeholder="Describe your concern..."></textarea>
             </div>
+                  <button class="submit-btn">Submit</button>
 
         </form>
 
-        <!-- BUTTON BELOW FORM -->
-        <button class="submit-btn">Submit</button>
-
+    
+       
     </div>
 
 </div>

@@ -12,8 +12,6 @@
     <?php include 'customer_sidebar_header.php'; ?>
 
     <div class="content">
-
-        <h1>Payment Center</h1>
         <div class="payment-container">
 
         
@@ -30,7 +28,7 @@
 
             
 
-        </div>      
+       
       
         </div>
     </div>
