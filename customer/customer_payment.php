@@ -38,8 +38,8 @@
                 <h2>Scan QR Payment</h2>
 
                 <div class="qr-box">
-                    <img src="../images/qrph.jfif" alt="qrph">
-                </div>
+                   <!-- <img src="../images/qrph.jfif" alt="qrph">
+                </div>-->
                 <p>Scan using GCash / Maya / Banking App</p>
 
             </div>
