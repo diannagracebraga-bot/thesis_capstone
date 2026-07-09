@@ -5,52 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Payment</title>
     <link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
-    <link rel="stylesheet" href="../css/customer_payment.css?v=3">
+    <link rel="stylesheet" href="../css/customer_payment.css?v=5">
 </head>
 
 <body>
     <?php include 'customer_sidebar_header.php'; ?>
 
     <div class="content">
-
         <h1>Payment Center</h1>
+
         <div class="payment-container">
-
             <div class="payment-form">
-
                 <h2>Online Payment</h2>
+
                 <label>Account Number</label>
                 <input type="text" placeholder="Enter Account Number">
+
                 <label>Amount</label>
                 <input type="number" placeholder="Enter Amount">
+
                 <label>Payment Method</label>
                 <select>
                     <option>QR PH</option>
                     <option>Cash</option>
                 </select>
+
                 <label>Reference Number</label>
                 <input type="text" placeholder="Enter Reference Number">
 
                 <button class="confirm-btn">Confirm Payment</button>
             </div>
-            <div class="qr-section">
 
+            <div class="qr-section">
                 <h2>Scan QR Payment</h2>
 
                 <div class="qr-box">
-                   <!-- <img src="../images/qrph.jfif" alt="qrph">
-                </div>-->
+                    QR CODE
+                </div>
+
                 <p>Scan using GCash / Maya / Banking App</p>
-
             </div>
+        </div>
 
-            
-
-        </div>      
         <div class="history">
-
             <h2>Recent Transactions</h2>
-           <table>
+
+            <table>
                 <thead>
                     <tr>
                         <th>Transactions ID</th>
@@ -79,6 +79,6 @@
             </table>
         </div>
     </div>
-
 </body>
 </html>
+
