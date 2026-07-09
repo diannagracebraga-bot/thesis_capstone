@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Dashboard</title>
-<link rel="stylesheet" href="../css/customer_dashboard.css">
+<link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
+<link rel="stylesheet" href="../css/customer_dashboard.css?v=2">
 </head>
 <body>
 <?php include 'customer_sidebar_header.php'; ?>
@@ -18,7 +19,7 @@
         <div class="right-top">
             <div class="date-card">
                 <p>Tuesday</p>  
-                <h3>July 1, 2026</h3>
+                <h3>July 8, 2026</h3>
             </div>
             <div class="plan-card">
                 <h3>Current Plan</h3>

@@ -1,60 +1,55 @@
-.body{
-    background: rgb(5, 5, 226);
-}.content{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-}.content h1{
-    text-align: margin-left 20px;
-}.table-container{
-    margin-top: 20px;
-}.table {
-    width: 100%;
-    border-collapse: collapse;
-}.table th, .table td{
-    padding: 12px;
-    border: 1px solid #9c9ca0;
-    text-align: left;
-}.table th{
-    background-color: #a9a5a5;
-}.table tr:nth-child(even){
-    background-color: #817c7c;
-}.ticket-card{
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}.ticket-card h2{
-    margin-top: 0;
-}.ticket-card p{
-    margin-bottom: 10px;
-}.ticket-card button{
-    background-color: #004AAD;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}.ticket-card button:hover{
-    background-color: #003580;
-}.ticket-list{
-    list-style-type: none;
-    padding: 0;
-}.ticket-list li{
-    background-color: #f2f2f2;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}.ticket-list li h3{
-    margin-top: 0;
-}.ticket-list li p{
-    margin-bottom: 5px;
-}.ticket-list li .status{
-    font-weight: bold;
-}.ticket-list li .status.open{
-    color: green;
-}.ticket-list li .status.closed{
-    color: red;
-}.ticket-list li .status.pending{
-    color: orange;
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+.ticket-content{
+    margin-left: 200px;
+    padding-top: 72px;
+    min-height: 100vh;
+    background:#fff;
+}
+.ticket-section{
+    padding:28px;
+    overflow-x:auto;
+}
+.ticket-section h2{
+    font-size:36px;
+    font-weight:400;
+    margin-bottom:15px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:720px;
+}
+thead{
+    background:#f5aa24;
+}
+th{
+    padding:12px;
+    font-size:15px;
+    font-weight:normal;
+    text-align:center;
+}
+td{
+    padding:11px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    font-size:15px;
+}
+.view-btn{
+    background:#18b8d8;
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    padding:6px 20px;
+    cursor:pointer;
+    font-size:14px;
+}
+.view-btn:hover{
+    background:#0098bb;
 }
