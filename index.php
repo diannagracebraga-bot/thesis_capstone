@@ -1,7 +1,4 @@
-
-<?php
-include 'database/database_connection.php';
-
+<?php include 'database/database_connection.php';
 // Internet Plans
 $plan_sql = "SELECT * FROM internet_plan_tbl ORDER BY plan_id ASC";
 $plan_result = mysqli_query($conn, $plan_sql);
@@ -23,6 +20,7 @@ $about = mysqli_fetch_assoc($about_result);
     <link rel="stylesheet" href="css/inquire.css">
     <link rel="stylesheet" href="css/plan.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -58,7 +56,9 @@ $about = mysqli_fetch_assoc($about_result);
                     <a class="nav-link" href="#home">Home</a>
                     <a class="nav-link" href="#inquire">Inquire</a>
                     <a class="nav-link" href="#plan">Plan</a>
-                    <a class="nav-link" href="#login">Login</a>
+                    <a  class="nav-link"href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+    Login
+</a>
                     <a class="nav-link" href="#about">About</a>
                 </div>
 
@@ -68,13 +68,6 @@ $about = mysqli_fetch_assoc($about_result);
 
     </div>
 </nav>
-
-
-
-
-
-
-
 <section id="home">
 <br>
     <h1 class="center_name">
@@ -88,10 +81,7 @@ $about = mysqli_fetch_assoc($about_result);
     <div class="image-container">
         <img src="images/bg_logo.png" alt="Logo">
     </div>
-
 </section>
-
-
 
 <section id="inquire">
 
@@ -117,18 +107,11 @@ $about = mysqli_fetch_assoc($about_result);
                       required></textarea><br><br>
 
             <button type="submit">Submit</button>
-
         </form>
-
     </div>
-
 </section>
 
-
-
 <section id="plan">
-
-
     <section class="plans">
 
         <?php while ($plan = mysqli_fetch_assoc($plan_result)) { ?>
@@ -138,28 +121,16 @@ $about = mysqli_fetch_assoc($about_result);
             <h1 class="plan-name">
                 <?php echo $plan['plan_name'];?>
             </h1>
-    
                 <h3><?php echo $plan['internet_mbps']; ?> Mbps</h3>
-
                 <h2>
-                    ₱<?php echo number_format($plan['internet_price']); ?> / Month
-                </h2>
-
-                <a href="front_page_menus/apply_internet.php">
-                    <button>APPLY NOW</button>
-                </a>
-
-            </div>
-
+                    ₱<?php echo number_format($plan['internet_price']); ?> / Month </h2>
+                     <a href="front_page_menus/apply_internet.php"> <button>APPLY NOW</button> </a>
+              </div>
         <?php } ?>
-
     </section>
 
 </section>
-
-
 <section id="about">
-
 
     <div class="pad">
 
@@ -186,10 +157,56 @@ $about = mysqli_fetch_assoc($about_result);
             <p><?php echo $about['business_address']; ?></p>
 
         </div>
-
     </div>
-
 </section>
+
+<div class="modal fade" id="loginModal" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-centered  modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="login-container">
+                    <h2>Login</h2>
+                    <form action="login.php" method="POST">
+                        <label for="username">Username:</label>
+                        <input type="text"
+                               id="username"
+                               name="username"
+                               class="form-control"
+                               placeholder="Username"
+                               required>
+                        <br>
+                        <label for="password">Password:</label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               class="form-control"
+                               placeholder="Password"
+                               required>
+                        <br>
+                        <div class="forgot-password">
+                            <a href="forgot_password.php">
+                                <i>Forgot Password?</i>
+                            </a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Login
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
