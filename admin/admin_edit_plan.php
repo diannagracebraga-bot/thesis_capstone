@@ -4,17 +4,19 @@ $sql_plan = "SELECT * FROM internet_plan_tbl";
 $plan_result = mysqli_query($conn, $sql_plan);
 
 if(isset($_POST['save_plans'])){
+foreach($_POST['internet_price'] as $plan_id => $internet_price){
 
-    foreach($_POST['internet_price'] as $plan_id => $internet_price){
+    $plan_name = $_POST['plan_name'][$plan_id];
+    $mbps = $_POST['internet_mbps'][$plan_id];
 
-         $mbps = $_POST['internet_mbps'][$plan_id];
+    $update = "UPDATE internet_plan_tbl
+       SET plan_name='$plan_name',
+           internet_price='$internet_price',
+           internet_mbps='$mbps'
+       WHERE plan_id='$plan_id'";
 
-        $update = "UPDATE internet_plan_tbl
-           SET internet_price='$internet_price',
-               internet_mbps='$mbps'
-           WHERE plan_id='$plan_id'";
-
-        mysqli_query($conn, $update);}
+    mysqli_query($conn, $update);
+}
     echo "<script>
             alert('Internet plans updated successfully!');
             window.location='admin_edit_plan.php';
@@ -47,26 +49,36 @@ if(isset($_POST['save_plans'])){
 
 <?php while($plan = mysqli_fetch_assoc($plan_result)){ ?>
 
-    <div class="form-group row mb-4">
-        <label class="col-sm-2 col-form-label "> Internet Plan: </label>
+<div class="form-group row mb-4">
 
-        <div class="col-sm-3">
-            <input
-                type="text"
-                class="form-control"
-                name="internet_price[<?php echo $plan['plan_id']; ?>]"
-                value="<?php echo $plan['internet_price']; ?>">
-        </div>
-
-        <label class="col-sm-1 col-form-label text-center"> Mbps: </label>
-        <div class="col-sm-3">
-            <input
-                type="text"
-                class="form-control"
-                name="internet_mbps[<?php echo $plan['plan_id']; ?>]"
-                value="<?php echo $plan['internet_mbps']; ?>">
-        </div>
+    <label class="col-sm-2 col-form-label">Plan Name:</label>
+    <div class="col-sm-2">
+        <input
+            type="text"
+            class="form-control"
+            name="plan_name[<?php echo $plan['plan_id']; ?>]"
+            value="<?php echo $plan['plan_name']; ?>">
     </div>
+
+    <label class="col-sm-2 col-form-label">Internet Price:</label>
+    <div class="col-sm-2">
+        <input
+            type="text"
+            class="form-control"
+            name="internet_price[<?php echo $plan['plan_id']; ?>]"
+            value="<?php echo $plan['internet_price']; ?>">
+    </div>
+
+    <label class="col-sm-1 col-form-label">Mbps:</label>
+    <div class="col-sm-2">
+        <input
+            type="text"
+            class="form-control"
+            name="internet_mbps[<?php echo $plan['plan_id']; ?>]"
+            value="<?php echo $plan['internet_mbps']; ?>">
+    </div>
+
+</div>
 
 <?php } ?>
 <br>

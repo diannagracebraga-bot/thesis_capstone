@@ -151,7 +151,7 @@ include '../database/database_connection.php';
 			 <br>
 			 </div>
 
-             <button type ="submit" class = "btn btn-primary">Submit</button>
+             <button href = "../index.php"type ="submit" class = "btn btn-primary">Submit</button>
 		</div>
 
 		 

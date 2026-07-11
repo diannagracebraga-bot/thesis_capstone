@@ -6,10 +6,14 @@
 <title>Customer Dashboard</title>
 <link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
 <link rel="stylesheet" href="../css/customer_dashboard.css?v=2">
+
 </head>
 <body>
 <?php include 'customer_sidebar_header.php'; ?>
 <div class="content">
+
+
+
 
     <div class="top-section">
         <div class="welcome">
@@ -30,18 +34,12 @@
         </div>
     </div>
     <div class="summary">
-        <div class="card">
-            <h4>Current Balance</h4>
-            <span>₱0.00</span>
-        </div>
+     
         <div class="card">
             <h4>Service Status</h4>
             <span class="online">● Connected</span>
         </div>
-        <div class="card">
-            <h4>Paid Bills</h4>
-            <span>15</span>
-        </div>
+    
         <div class="card">
             <h4>Next Due Date</h4>
             <span>July 15, 2026</span>

@@ -27,7 +27,7 @@ VALUES
 if(mysqli_query($conn, $sql)){
     echo "<script>  
             alert('Internet Application submitted successfully!');
-            window.location='../admin/admin_applicants.php';
+            window.location='../index.php';
           </script>";
 }else{
     echo "Failed to Submit inquiry " . mysqli_error($conn);
