@@ -34,12 +34,10 @@
 					<thead>
 					<tr>
 						<th>CUSTOMER ID</th>
-						<th>ACCOUNT NO.</th>
 						<th>FIRST NAME</th>
+                        <th>MIDDLE NAME</th>
 						<th>LAST NAME</th>
-						<th>AGE</th>
 						<th>CONTACT</th>
-                        <th>EMAIL</th>
                         <th>STATUS</th>
                         <th>ACTION</th>
 					</tr>
