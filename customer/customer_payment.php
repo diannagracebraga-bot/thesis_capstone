@@ -20,8 +20,8 @@
                 <h2>Scan QR Payment</h2>
 
                 <div class="qr-box">
-                   <img src="../images/qrph.jfif" alt="qrph">
-                </div>
+    <img id="qr-image" alt="QR PH Payment">
+</div>
                 <p>Scan using GCash / Maya / Banking App</p>
 
             </div>
@@ -33,5 +33,68 @@
         </div>
     </div>
 
+  
+
+
+    <script>
+async function loadQRCode() {
+
+    // Get Payment Intent from PHP backend
+    const intentResponse = await fetch("../database/payment_intent.php");
+    const paymentIntent = await intentResponse.json();
+
+    const paymentIntentId = paymentIntent.data.id;
+    const clientKey = paymentIntent.data.attributes.client_key;
+
+    // 1) Create QR PH Payment Method
+    const response = await fetch("https://api.paymongo.com/v1/payment_methods", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Basic " + btoa("pk_live_WgQj8QFMeQmzhxYHDvZJ2uHZ:")
+        },
+        body: JSON.stringify({
+            data: {
+                attributes: {
+                    type: "qrph"
+                }
+            }
+        })
+    });
+
+    const paymentMethod = await response.json();
+
+    // 2) Attach Payment Method to Payment Intent
+    const attachResponse = await fetch(
+        `https://api.paymongo.com/v1/payment_intents/${paymentIntentId}/attach`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + btoa("pk_live_WgQj8QFMeQmzhxYHDvZJ2uHZ:")
+            },
+            body: JSON.stringify({
+                data: {
+                    attributes: {
+                        payment_method: paymentMethod.data.id,
+                        client_key: clientKey
+                    }
+                }
+            })
+        }
+    );
+
+    const intent = await attachResponse.json();
+
+    console.log(intent);
+
+    // 3) Show QR Code
+    const imageUrl = intent.data.attributes.next_action.code.image_url;
+
+    document.getElementById("qr-image").src = imageUrl;
+}
+
+loadQRCode();
+</script>
 </body>
 </html>
