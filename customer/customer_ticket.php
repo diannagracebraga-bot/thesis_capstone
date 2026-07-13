@@ -27,24 +27,28 @@ $result = mysqli_query($conn, $query);
             <table>
                 <thead>
                     <tr>
-                        <th>Ticket Number</th>
-                        <th>Concern</th>
-                        <th>Date Submitted</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Ticket ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Concern Type</th>
+                        <th>Date Received</th>
+                         <th>Status</th>
+                         <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <?php while ($ticket = mysqli_fetch_assoc($result)): ?>
 <tr>
-    <td>Ticket #<?php echo $ticket['ticket_id']; ?></td>
-    <td><?php echo $ticket['concern']; ?></td>
-    <td><?php echo $ticket['date_submitted']; ?></td>
-    <td><?php echo $ticket['priority']; ?></td>
-    <td><?php echo $ticket['status']; ?></td>
-    <td><button class="view-btn">View</button></td>
+<td><?php echo $ticket['ticket_id']; ?></td>
+<td><?php echo $ticket['full_name']; ?></td>
+<td><?php echo $ticket['email_address']; ?></td>
+<td><?php echo $ticket['contact_number']; ?></td>
+<td><?php echo $ticket['concern_type']; ?></td>
+<td><?php echo $ticket['date_received']; ?></td>
+<td><?php echo $ticket['status']; ?></td>
+<td><button class="view-btn">View</button></td>
 </tr>
 <?php endwhile; ?>
 
