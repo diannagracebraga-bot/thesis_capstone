@@ -25,11 +25,7 @@ if(isset($_POST['update'])) {
     if (mysqli_query($conn, $query)) {
         echo "<script>alert('Record updated successfully.'); window.location.href='../admin/admin_payment.php';</script>";
     } else {
-<<<<<<< HEAD
-        echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='a../admin/dmin_payment.php';</script>";
-=======
         echo "<script>alert('Error updating record: " . mysqli_error($conn) . "'); window.location.href='../admin/admin_payment.php';</script>";
->>>>>>> f837b347bb1a135a385482fb6704dae766d5078b
     }
 }
 ?>
