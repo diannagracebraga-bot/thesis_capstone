@@ -131,33 +131,57 @@ $about = mysqli_fetch_assoc($about_result);
 
 </section>
 <section id="about">
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
 
-    <div class="pad">
+                <p class="text-justify">
+                    <strong><?php echo $about['business_name']; ?></strong>
+                    <i> ALWAYS CONNECTED </i><br><br>
 
-        <h1><?php echo $about['business_name']; ?></h1>
+                    <?php echo $about['business_description']; ?>
+                </p>
+            </div>
 
-        <h3>ALWAYS CONNECTED</h3>
+            <div class="col-xs-6 col-md-3">
+                <h6 class = "contact-title">Contact</h6>
+<div class="footer-links">
 
-        <p><?php echo $about['business_description']; ?></p>
+    <div class="contact-item">
+             <img src="images/mail.png" alt="mail">
+        <span><?php echo $about['business_email']; ?></span>
+    </div>
 
-        <h1>CONTACT</h1>
+    <div class="contact-item">
+         <img src="images/phone.png" alt="phone">
+        <span><?php echo $about['business_contact']; ?></span>
+    </div>
 
-        <div class="details">
+    <div class="contact-item">
+        <img src="images/location.png" alt="location">
+        <span><?php echo $about['business_address']; ?></span>
+    </div>
 
-            <img src="images/mail.png" alt="Mail">
-            <p><?php echo $about['business_email']; ?></p>
+</div>
+            </div>
+        </div>
+        <hr>
+    </div>
 
-            <img src="images/phone.png" alt="Phone">
-            <p><?php echo $about['business_contact']; ?></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
 
-            <img src="images/fb.png" alt="Facebook">
-            <p><?php echo $about['business_social_media']; ?></p>
-
-            <img src="images/location.png" alt="Location">
-            <p><?php echo $about['business_address']; ?></p>
-
+                    <a href="#">
+                        <?php echo $about['business_name']; ?>
+                    </a>.   All Rights Reserved.
+            </div>
+            </div>
         </div>
     </div>
+</footer>
 </section>
 
 <div class="modal fade" id="loginModal" tabindex="-1" >

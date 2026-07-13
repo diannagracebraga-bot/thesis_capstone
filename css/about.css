@@ -1,31 +1,55 @@
-.pad{
-    background: linear-gradient(135deg, rgba(250, 205, 45, 1) 11%, rgba(230, 120, 47, 1) 75%);
-    margin-top: 200px;
-    padding: 7%;
+footer{
+    background: whitesmoke;
+    color: #1f2937;
+    padding: 60px 0 25px;
+    margin-top: 60px;
 }
-
-.pad h1, .pad h3{
-    text-align: center;
+footer h6{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    
+    color: #fbbf24;
 }
-.pad p{
-    text-align: center;
-    margin: 0;
+footer p{
+    font-size: 20px; 
 }
-
-.details{
-    width: fit-content;
+.footer-links .mb-2{
+    font-size: 20px;
 }
-
-.details p{
-    text-align: left;
-    display: inline-block;
-    margin-left: 40px;
-    margin-right: 17px;
+footer hr{
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255,.15);
+    margin: 35px 0;
 }
-
-.details img{
-    width: 25px;
-    height: 25px;
+.copyright-text a:hover{
+    color: #ffffff;
+}
+.contact-item{
     margin-left: 80px;
-    vertical-align: middle;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
 }
+.contact-item i{
+    width: 20px;
+    font-size: 18px;
+    color: #fbbf24;
+    margin-top: 3px;
+}
+.contact-item span{
+   font-size: 20px;
+}
+.contact-title{
+    padding-left: 120px;
+}
+.contact-item img{
+    width: 30px;
+    height: 30px;
+
+}
+
+
