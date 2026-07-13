@@ -1,50 +1,14 @@
 <?php
 include '../database/database_connection.php';
 
-if(isset($_POST['register'])){
-    $idt=$_POST['id'];
-    $email=$_POST['email'];
-    $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
-    $fname=$_POST['f_name'];
-    $mname=$_POST['m_name'];
-    $lname=$_POST['l_name'];
-    $contactnumber=$_POST['contact_number'];
-    $age=$_POST['age'];
-    $sex=$_POST['sex'];
-    $civil=$_POST['civil_status'];
-    $birth=$_POST['birth_date'];
-    $barangay=$_POST['barangay'];
-    $house=$_POST['house_number'];
-    $subdivision=$_POST['subdivision'];
-    $street=$_POST['street'];
-    $plan=$_POST['internet_plan'];
-    $status=$_POST['connection_status'];
-    $check=mysqli_query($conn,"SELECT * FROM customer_tbl WHERE email='$email'");
+$plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan_id ASC");
 
-    if(mysqli_num_rows($check)>0){
-        echo "<script> alert('Email Already Exists');
-        window.location='admin_add_customer.php'; </script>";
-    exit();
-}
-$sql="INSERT INTO login_tbl
-(id, email, password, f_name, m_name, l_name, age, sex, civil_status,
- birth_date, barangay, subdivision, street, house_name, internet_plan, connection_status)
- VALUES ( '$id', '$email', '$password', '$fname', '$mname', '$lname', '$age', '$sex', '$civil',
-'$birth'.'$barangay', '$subdivision', '$street', '$house', '$plan','$status')";
-
-if(mysqli_query($conn,$sql)){
-    echo "<script> alert('Customer Registered Successfully');
-    window.location='../admin/admin_user_management.php'; </script>";
-    }else{
-        echo mysqli_error($conn);
-}
-}
 ?>
 <link rel="stylesheet" href="../css/admin_add_customer.css">
 
 <div class="customer_registration">
     <h3>Customer Registration</h3>
-    <form action="insert_customer.php" method="POST">
+    <form action="../database/insert_customer.php" method="POST">
         <div class="form_grid">
             <div class="form_group">
                 <label>Account Number</label>
@@ -114,12 +78,17 @@ if(mysqli_query($conn,$sql)){
                 <input type="text" name="subdivision">
             </div>
             <div class="form_group">
-            <label>Internet Plan</label>
-                 <select name="internet_plan">
-                    <option>Plan 800 - 50 Mbps</option>
-                    <option>Plan 1000 - 100 Mbps</option>
-                    <option>Plan 1200 - 150 Mbps</option>
-                </select>
+        <?php
+            
+            $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl");
+                ?> <select name="internet_plan">
+                        <?php while($plan = mysqli_fetch_assoc($plan_query)){ ?>
+                        <option value="<?php echo $plan['plan_id']; ?>">
+                        <?php echo $plan['plan_name']; ?> -
+                        <?php echo $plan['internet_mbps']; ?> Mbps -
+                       ₱<?php echo $plan['internet_price']; ?></option>
+                        <?php } ?>
+                  </select>
             </div>
             <div class="form_group">
             <label>Connection Status</label>
