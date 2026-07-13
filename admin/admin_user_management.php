@@ -38,40 +38,6 @@ $page = $_GET['page'] ?? 'users';
                     <th>ACTION</th>
                 </tr>
             </thead>
-            <?php
-					$query = "SELECT * FROM customer_tbl";
-					$result = mysqli_query($conn, $query);
-					if (!$result) {
-						die("Query failed: " . mysqli_error($conn));
-					} 
-					else {
-					while($row = mysqli_fetch_assoc($result)){
-						?>
-					<tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['acc_number']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['f_name']; ?></td>
-                        <td><?php echo $row['m_name']; ?></td>
-                        <td><?php echo $row['l_name']; ?></td>
-                        <td><?php echo $row['age']; ?></td>
-                        <td><?php echo $row['c_status']; ?></td>
-                        <td><?php echo $row['sex']; ?></td>
-                        <td><?php echo $row['b_date']; ?></td>
-                        <td><?php echo $row['barangay']; ?></td>
-                        <td><?php echo $row['h_number']; ?></td>
-                        <td><?php echo $row['street']; ?></td>
-                        <td><?php echo $row['subdivision']; ?></td>
-                        <td><?php echo $row['plan']; ?></td>
-                        <td><?php echo $row['conn_status']; ?></td>
-                        <td>
-                            <a href="edit_customer.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        </td>
-                    </tr>
-                    <?php
-}
-}
-?>
             
         </table>
 

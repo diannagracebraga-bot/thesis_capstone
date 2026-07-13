@@ -1,196 +1,136 @@
-<link rel="stylesheet" href="../css/admin_add_customer.css">
-      
+<?php
+include '../database/database_connection.php';
 
+if(isset($_POST['register'])){
+    $idt=$_POST['id'];
+    $email=$_POST['email'];
+    $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
+    $fname=$_POST['f_name'];
+    $mname=$_POST['m_name'];
+    $lname=$_POST['l_name'];
+    $contactnumber=$_POST['contact_number'];
+    $age=$_POST['age'];
+    $sex=$_POST['sex'];
+    $civil=$_POST['civil_status'];
+    $birth=$_POST['birth_date'];
+    $barangay=$_POST['barangay'];
+    $house=$_POST['house_number'];
+    $subdivision=$_POST['subdivision'];
+    $street=$_POST['street'];
+    $plan=$_POST['internet_plan'];
+    $status=$_POST['connection_status'];
+    $check=mysqli_query($conn,"SELECT * FROM customer_tbl WHERE email='$email'");
+
+    if(mysqli_num_rows($check)>0){
+        echo "<script> alert('Email Already Exists');
+        window.location='admin_add_customer.php'; </script>";
+    exit();
+}
+$sql="INSERT INTO login_tbl
+(id, email, password, f_name, m_name, l_name, age, sex, civil_status,
+ birth_date, barangay, subdivision, street, house_name, internet_plan, connection_status)
+ VALUES ( '$id', '$email', '$password', '$fname', '$mname', '$lname', '$age', '$sex', '$civil',
+'$birth'.'$barangay', '$subdivision', '$street', '$house', '$plan','$status')";
+
+if(mysqli_query($conn,$sql)){
+    echo "<script> alert('Customer Registered Successfully');
+    window.location='../admin/admin_user_management.php'; </script>";
+    }else{
+        echo mysqli_error($conn);
+}
+}
+?>
+<link rel="stylesheet" href="../css/admin_add_customer.css">
 
 <div class="customer_registration">
     <h3>Customer Registration</h3>
-
-
+    <form action="insert_customer.php" method="POST">
         <div class="form_grid">
-
             <div class="form_group">
-                <label>Account Number:</label>
+                <label>Account Number</label>
                 <input type="number" name="account_number" required>
             </div>
-
             <div class="form_group">
-                <label>Email Address:</label>
-                <input type="text" name="email_address" required>
+                <label>Email Address</label>
+                <input type="email" name="email_address" required>
             </div>
             <div class="form_group">
-                <label>Password:</label>
-                <input type="text" name="password" required>
+                <label>Password</label>
+                <input type="password" name="password" required>
             </div>
             <div class="form_group">
-                <label>First Name:</label>
+                <label>First Name</label>
                 <input type="text" name="first_name" required>
             </div>
-
             <div class="form_group">
-                <label>Middle Name:</label>
+                <label>Middle Name</label>
                 <input type="text" name="middle_name">
             </div>
-
             <div class="form_group">
-                <label>Last Name:</label>
+                <label>Last Name</label>
                 <input type="text" name="last_name" required>
             </div>
-
             <div class="form_group">
-                <label>Age:</label>
+                <label>Age</label>
                 <input type="number" name="age" required>
             </div>
-
             <div class="form_group">
-                <label>Civil Status:</label>
-                <select name="civil_status" required>
-                    <option value="">-- Select --</option>
+                <label>Civil Status</label>
+                <select name="civil_status">
                     <option>Single</option>
                     <option>Married</option>
-                    <option>Widowed</option>
-                    <option>Separated</option>
                 </select>
             </div>
-
             <div class="form_group">
-                <label>Sex:</label>
-                <select name="gender" required>
-                    <option value="">-- Select --</option>
+                <label>Sex</label>
+                <select name="gender">
                     <option>Male</option>
                     <option>Female</option>
                 </select>
             </div>
-
             <div class="form_group">
-                <label>Birth Date:</label>
-                <input type="date" name="birth_date" required>
+                <label>Birth Date</label>
+                <input type="date" name="birth_date">
             </div>
-
             <div class="form_group">
-                <label>Barangay:</label>
-                <select name="barangay" required>
-                    <option value="">-- Select Barangay --</option>
+            <label>Barangay</label>
+                <select name="barangay">
                     <option>Amaya I</option>
                     <option>Amaya II</option>
                     <option>Amaya III</option>
-                    <option>Amaya IV</option>
-                    <option>Amaya V</option>
-                    <option>Amaya VI</option>
-                    <option>Amaya VII</option>
-                    <option>Bagtas</option>
-                    <option>Barangay I</option>
-                    <option>Barangay II</option>
-                    <option>Barangay III</option>
-                    <option>Barangay IV</option>
-                    <option>Biga</option>
-                    <option>Biwas</option>
-                    <option>Bucal</option>
-                    <option>Bunga</option>
-                    <option>Calibuyo</option>
-                    <option>Capipisa</option>
-                    <option>Daang Amaya I</option>
-                    <option>Daang Amaya II</option>
-                    <option>Daang Amaya III</option>
-                    <option>Halayhay</option>
-                    <option>Julugan I</option>
-                    <option>Julugan II</option>
-                    <option>Julugan III</option>
-                    <option>Julugan IV</option>
-                    <option>Julugan V</option>
-                    <option>Julugan VI</option>
-                    <option>Julugan VII</option>
-                    <option>Julugan VIII</option>
-                    <option>Lambingan</option>
-                    <option>Mulawin</option>
-                    <option>Paradahan I</option>
-                    <option>Paradahan II</option>
-                    <option>Punta I</option>
-                    <option>Punta II</option>
-                    <option>Sahud Ulan</option>
-                    <option>Sanja Mayor</option>
-                    <option>Santol</option>
-                    <option>Tanauan</option>
-                    <option>Tres Cruses</option>
                 </select>
-            </div>
 
-            <div class="form_group">
-                <label>House Number:</label>
-                <input type="text" name="house_number" required>
             </div>
-
             <div class="form_group">
-                <label>Street:</label>
+                <label>House Number</label>
+                <input type="text" name="house_number">
+            </div>
+            <div class="form_group">
+                <label>Street</label>
                 <input type="text" name="street">
             </div>
-
             <div class="form_group">
-                <label>Subdivision:</label>
+                <label>Subdivision</label>
                 <input type="text" name="subdivision">
             </div>
-
             <div class="form_group">
-                <label>Internet Plan:</label>
-                <select name="internet_plan" required>
-                    <option value="">-- Select Plan --</option>
+            <label>Internet Plan</label>
+                 <select name="internet_plan">
                     <option>Plan 800 - 50 Mbps</option>
                     <option>Plan 1000 - 100 Mbps</option>
                     <option>Plan 1200 - 150 Mbps</option>
-                    <option>Plan 1500 - 200 Mbps</option>
-                    <option>Plan 2499 - 250 Mbps</option>
                 </select>
             </div>
-
             <div class="form_group">
-                <label>Connection Status:</label>
-                <select name="connection_status" required>
-                    <option value="">-- Select Status --</option>
+            <label>Connection Status</label>
+                <select name="connection_status">
                     <option>Connected</option>
                     <option>Disconnected</option>
                 </select>
             </div>
-
-            <div class="form_group full_width">
-                <input type="submit" value="Register">
-            </div>
-            <?php
-					$query = "SELECT * FROM customer_tbl";
-					$result = mysqli_query($conn, $query);
-					if (!$result) {
-						die("Query failed: " . mysqli_error($conn));
-					} 
-					else {
-					while($row = mysqli_fetch_assoc($result)){
-                        
-						?>
-					<tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['password']; ?></td>
-                        <td><?php echo $row['f_name']; ?></td>
-                        <td><?php echo $row['m_name']; ?></td>
-                        <td><?php echo $row['l_name']; ?></td>
-                        <td><?php echo $row['contact_number']; ?></td>
-                        <td><?php echo $row['age']; ?></td>
-                        <td><?php echo $row['sex']; ?></td>
-                        <td><?php echo $row['civil_status']; ?></td>
-                        <td><?php echo $row['birth_date']; ?></td>
-                        <td><?php echo $row['barangay']; ?></td>
-                        <td><?php echo $row['subdivision']; ?></td>
-                        <td><?php echo $row['street']; ?></td>
-                        <td><?php echo $row['house_name']; ?></td>
-                        <td><?php echo $row['internet_plan']; ?></td>
-                        <td><?php echo $row['connection_status']; ?></td>
-                        <td>
-                            <a href="edit_customer.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        </td>
-                    </tr>
-                    <?php
-}
-}
-?>
-
+           <div class="form_group full_width">
+           <input type="submit" name="register" value="Register">
+           </div>
         </div>
-
     </form>
 </div>
