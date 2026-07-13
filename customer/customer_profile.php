@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$query = "SELECT * FROM customer_profile_tbl WHERE customer_id = $customer_id";
+$query = "SELECT * FROM customer_tbl WHERE customer_id = $customer_id";
 $result = mysqli_query($conn, $query);
 $customer = mysqli_fetch_assoc($result);
 ?>
@@ -33,6 +33,7 @@ $customer = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
     <link rel="stylesheet" href="../css/customer_profile.css?v=1">
 </head>
