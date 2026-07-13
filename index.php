@@ -79,8 +79,8 @@ $about = mysqli_fetch_assoc($about_result);
     </h6>
 
     <div class="image-container">
-        <img src="images/bg_logo.png" alt="Logo">
-    </div>
+    <img src="images/bg_logo.png" alt="Logo" class="img-fluid">
+</div>
 </section>
 
 <section id="inquire">

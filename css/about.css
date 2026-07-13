@@ -4,29 +4,34 @@ footer{
     padding: 60px 0 25px;
     margin-top: 60px;
 }
+
 footer h6{
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 40px;
-    
     color: #fbbf24;
 }
+
 footer p{
-    font-size: 20px; 
+    font-size: 20px;
 }
+
 .footer-links .mb-2{
     font-size: 20px;
 }
+
 footer hr{
     border: 0;
     height: 1px;
     background: rgba(255,255,255,.15);
     margin: 35px 0;
 }
+
 .copyright-text a:hover{
     color: #ffffff;
 }
+
 .contact-item{
     margin-left: 80px;
     display: flex;
@@ -34,22 +39,24 @@ footer hr{
     gap: 15px;
     margin-bottom: 18px;
 }
+
 .contact-item i{
     width: 20px;
     font-size: 18px;
     color: #fbbf24;
     margin-top: 3px;
 }
+
 .contact-item span{
-   font-size: 20px;
+    font-size: 20px;
+    word-break: break-word;   /* ADDED */
 }
+
 .contact-title{
     padding-left: 120px;
 }
+
 .contact-item img{
     width: 30px;
     height: 30px;
-
 }
-
-
