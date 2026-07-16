@@ -56,6 +56,8 @@ if(isset($_POST['update'])){
                         Edit Internet Plan
                     </button></a>
     </div>-->
+    <div class="card w-75">
+  				<div class="card-body">
    <form method="POST" class="form-horizontal">
     <div class="content-wrapper">
 
@@ -123,7 +125,8 @@ if(isset($_POST['update'])){
         </div>
     </div>
 </form>
-
+</div>
+</div>
 <br>
  
 	

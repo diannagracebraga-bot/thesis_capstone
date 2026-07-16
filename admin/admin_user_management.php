@@ -17,7 +17,8 @@ $page = $_GET['page'] ?? 'users';
     <?php include 'admin_sidebar_header_profile.php'; ?>
 
     <h1>User Management Tracking</h1>
-
+                <div class="card w-75">
+  				<div class="card-body">
     <div class="table-container">
 
 <?php
@@ -27,11 +28,11 @@ $page = $_GET['page'] ?? 'users';
 		} else {
         ?>
 
-        <table class="table_applicants">
-            <thead>
+        <table class="table table-secondary table-hover">
+            <thead class = "table-info">
                 <tr>
                     <th>ACCOUNT NUMBER</th>
-                    <th>Name</th>
+                    <th>NAME</th>
                     <th>EMAIL ADDRESS</th>
                     <th>ROLE</th>
                     <th>ACCOUNT STATUS</th>
@@ -40,6 +41,8 @@ $page = $_GET['page'] ?? 'users';
             </thead>
             
         </table>
+</div>
+</div>
 
  <?php } ?>
 

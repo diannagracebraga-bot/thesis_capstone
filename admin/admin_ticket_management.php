@@ -12,7 +12,8 @@
 	<?php include 'admin_sidebar_header_profile.php'; ?>
 		
 		<h1> User Management Tracking </h1>
-
+			<div class="card w-75">
+  				<div class="card-body">
 			<div class = "table-container">
 				<div class = "aligned" >
         <div class="searchbar-container">
@@ -21,8 +22,8 @@
 				</div>
 </div>
 		<br>
-				<table class = "table_inquiries">
-					<thead>
+				<table class = "table table-secondary table-hover">
+					<thead class = "table-info">
 					<tr>
 						<th>TICKET ID </th>
 						<th>FULL NAME </th>
@@ -46,6 +47,8 @@
 						</tr>
 
 </table>
+</div>
+</div>
 				
 </body>
 </html>
