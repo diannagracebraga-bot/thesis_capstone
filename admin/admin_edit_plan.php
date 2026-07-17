@@ -36,7 +36,8 @@ foreach($_POST['internet_price'] as $plan_id => $internet_price){
 <body>
 
 <?php include 'admin_sidebar_header_profile.php'; ?>
-
+<div class="card w-75">
+  				<div class="card-body">
 <form method="POST" class="plan-container">
 
          <div class="pill-nav offset-sm-9 mb-3">
@@ -91,6 +92,8 @@ foreach($_POST['internet_price'] as $plan_id => $internet_price){
 </div>
 
     </div>
+</div>
+</div>
 
 </body>
 </html>

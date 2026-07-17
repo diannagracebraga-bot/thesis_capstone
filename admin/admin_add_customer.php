@@ -1,5 +1,8 @@
 <?php
 include '../database/database_connection.php';
+
+$plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan_id ASC");
+
 ?>
 <link rel="stylesheet" href="../css/admin_add_customer.css">
 
@@ -86,12 +89,17 @@ include '../database/database_connection.php';
                 </select>
             </div>
             <div class="form_group">
-            <label>Internet Plan</label>
-                 <select name="internet_plan">
-                    <option>Plan 800 - 50 Mbps</option>
-                    <option>Plan 1000 - 100 Mbps</option>
-                    <option>Plan 1200 - 150 Mbps</option>
-                </select>
+        <?php
+            
+            $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl");
+                ?> <select name="internet_plan">
+                        <?php while($plan = mysqli_fetch_assoc($plan_query)){ ?>
+                        <option value="<?php echo $plan['plan_id']; ?>">
+                        <?php echo $plan['plan_name']; ?> -
+                        <?php echo $plan['internet_mbps']; ?> Mbps -
+                       ₱<?php echo $plan['internet_price']; ?></option>
+                        <?php } ?>
+                  </select>
             </div>
             <div class="form_group">
             <label>Connection Status</label>
