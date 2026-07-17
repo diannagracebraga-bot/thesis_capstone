@@ -78,6 +78,14 @@ include '../database/database_connection.php';
                 <input type="text" name="house_number">
             </div>
             <div class="form_group">
+            <label>Role</label>
+                 <select name="role">
+                    <option>Super Admin</option>
+                    <option>Admin</option>
+                    <option>Customer</option>
+                </select>
+            </div>
+            <div class="form_group">
             <label>Internet Plan</label>
                  <select name="internet_plan">
                     <option>Plan 800 - 50 Mbps</option>

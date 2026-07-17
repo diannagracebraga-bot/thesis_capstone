@@ -2,7 +2,6 @@
 $page = $_GET['page'] ?? 'users';
 include '../database/database_connection.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,57 +49,28 @@ if(mysqli_num_rows($result) > 0){
         echo $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
         ?>
     </td>
-
-
-    <td>
-        <?php echo $row['email']; ?>
-    </td>
-
-
-    <td>
-        Customer
-    </td>
-
-
-    <td>
-        <?php echo $row['connection_status']; ?>
-    </td>
-
-
-    <td>
-
-        <a href="edit_user.php?id=<?php echo $row['id']; ?>" 
-           class="btn btn-primary btn-sm">
-            Edit
-        </a>
-
-
-        <a href="delete_user.php?id=<?php echo $row['id']; ?>" 
-           class="btn btn-danger btn-sm"
-           onclick="return confirm('Delete this customer?');">
-            Delete
-        </a>
-
-    </td>
-
-    </tr>
+    <td><?php echo $row['email']; ?></td>
+    <td> Customer </td>
+    <td><?php echo $row['connection_status']; ?></td>
+    <td><a href="edit_user.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+    <a href="../database/delete.php?id=<?php echo $row['id']; ?>" 
+</tr>
     <?php
     }
     } else {
         ?>
         <tr>
-    <td colspan="6" style="text-align:center;">
-        No Customer Registered
-    </td>
-</tr>
+            <td colspan="6" style="text-align:center;">No Customer Registered</td>
+        </tr>
 <?php
 }
 ?>
-    </tbody>
+</tbody>
 </table>
 <?php
 }
 ?>
+</script>
 </div>
 </body>
 </html>

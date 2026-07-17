@@ -2,15 +2,14 @@
 include '../database/database_connection.php';
 
 if(isset($_POST['register'])){
-    $id=$_POST['id'];
-    $email=$_POST['email'];
+    $id=$_POST['account_number'];
+    $email=$_POST['email_address'];
     $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
-    $fname=$_POST['f_name'];
-    $mname=$_POST['m_name'];
-    $lname=$_POST['l_name'];
-    $contactnumber=$_POST['contact_number'];
+    $fname=$_POST['first_name'];
+    $mname=$_POST['middle_name'];
+    $lname=$_POST['last_name'];
     $age=$_POST['age'];
-    $sex=$_POST['sex'];
+    $sex=$_POST['gender'];
     $civil=$_POST['civil_status'];
     $birth=$_POST['birth_date'];
     $barangay=$_POST['barangay'];
@@ -23,7 +22,7 @@ if(isset($_POST['register'])){
 
     if(mysqli_num_rows($check)>0){
         echo "<script> alert('Email Already Exists');
-        window.location='../admin/admin_add_customer.php'; </script>";
+        window.location='admin_add_customer.php'; </script>";
     exit();
 }
 $sql="INSERT INTO login_tbl
