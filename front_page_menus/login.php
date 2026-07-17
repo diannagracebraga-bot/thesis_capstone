@@ -7,15 +7,15 @@ if (isset($_GET['logout'])) {
     exit();
 }
 if (isset($_POST['login'])) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
-    $query = "SELECT * FROM login_tbl WHERE username='$username'";
+    $query = "SELECT * FROM login_tbl WHERE email='$email'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
             $_SESSION['role'] = $user['role'];
             switch ($user['role']) {
                 //case "super_admin":
@@ -77,8 +77,8 @@ if (isset($_POST['login'])) {
     }
     ?>
     <form action="" method="POST">
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="Username" required>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Email" required>
         <br><br>
         <label>Password:</label>
         <input type="password" name="password" placeholder="Password" required>
