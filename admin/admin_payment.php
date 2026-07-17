@@ -25,7 +25,7 @@ include '../database/database_connection.php';
 				<div class = "payment-plus">
                     <form action="admin_add_payment.php" method="get">
 						<button type="submit" class="btn btn-success">
-							Add Customer
+							Add Payment
 						</button>
 					</form>
                

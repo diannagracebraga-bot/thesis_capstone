@@ -7,25 +7,6 @@ body{
     width: 100%;
     padding: 20px;
 }  
-.top-bar {
-    background: #004AAD;
-    padding: 16px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-}
-.profile-button {
-    display: flex;
-    padding: 6px 6px 6px 12px;
-    background: pink;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
-
 .icon2{
     width:60px;
     height: 60px;

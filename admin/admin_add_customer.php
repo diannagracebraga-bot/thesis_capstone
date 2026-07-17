@@ -78,6 +78,7 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
                 <input type="text" name="subdivision">
             </div>
             <div class="form_group">
+                <label>Internet Plan</label>
         <?php
             
             $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl");
@@ -98,7 +99,7 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
                 </select>
             </div>
            <div class="form_group full_width">
-           <input type="submit" name="register" value="Register">
+           <input type="submit" class = "btn btn-success"name="register" value="Register">
            </div>
         </div>
     </form>

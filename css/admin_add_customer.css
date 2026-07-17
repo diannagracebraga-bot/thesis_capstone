@@ -1,14 +1,12 @@
 body {
     margin: 0;
-    background-color: aliceblue;
 }
 
 .customer_registration {
-    background-color: lightblue;
+    background-color: #eef6ff;
     border-radius: 7px;
     padding: 40px;
-    width: 70%;
-    margin: 40px auto;
+    width: 100%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -44,10 +42,7 @@ body {
 input[type="submit"] {
     margin: auto;
     width: 20%;
+    border: none;
     padding: 10px;
     cursor: pointer;
-    background-color: cyan
-}
-input[type="submit"]:hover{
-  background-color: lightcyan;
 }

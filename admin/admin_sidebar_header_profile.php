@@ -48,8 +48,7 @@
             <a class="dashboard" href="admin_user_management.php">User Management</a><br>
             <a class="dashboard" href="admin_content_management.php">Content Management</a><br>
         </div>
-        <div class="header">    
-        </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
