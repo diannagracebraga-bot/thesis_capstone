@@ -1,3 +1,11 @@
+<?php
+session_start();
+include '../database/database_connection.php';
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../front_page_menus/login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
