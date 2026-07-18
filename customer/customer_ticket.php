@@ -22,10 +22,12 @@ $result = mysqli_query($conn, $query);
 <?php include 'customer_sidebar_header.php'; ?>
 
     <main class="ticket-content">
+         <div class="card w-75">
+  				<div class="card-body">
         <div class="ticket-section">
             <h2>My Tickets</h2>
-            <table>
-                <thead>
+            <table class = "table table-secondary table-hover">
+                <thead class = "table-warning">
                     <tr>
                         <th>Ticket ID</th>
                         <th>Full Name</th>
@@ -48,7 +50,7 @@ $result = mysqli_query($conn, $query);
 <td><?php echo $ticket['concern_type']; ?></td>
 <td><?php echo $ticket['date_received']; ?></td>
 <td><?php echo $ticket['status']; ?></td>
-<td><button class="view-btn">View</button></td>
+<td><button class="btn btn-primary">View</button></td>
 </tr>
 <?php endwhile; ?>
 

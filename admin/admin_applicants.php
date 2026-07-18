@@ -45,8 +45,6 @@ if(mysqli_query($conn, $sql)){
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
 	
-        <div class="header">
-        </div>
         	<h1>USER MANAGEMENT TRACKING</h1>
 			<div class="card w-75">
   				<div class="card-body">
@@ -184,6 +182,8 @@ while($row = mysqli_fetch_assoc($result)){
     </div>
 </div>
 <?php } ?>
+
+
 			
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>			
 </body>

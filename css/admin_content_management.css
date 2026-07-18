@@ -1,17 +1,14 @@
 .card{
     width: 75%;
     padding: 20px;
-    margin: auto;
+    margin: 0 0 0 305px;
     box-shadow: 0 6px 15px rgba(0,74,173,0.3);
 }
 .business-info-card{
-    background-color: #e9eaec;
-    padding: 50px;
+     background-color: #e9eaec;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 5px 5px lightgray;
-    max-height: 550px;
-    overflow-y: auto; /* vertical scroll */
-    overflow-x: auto; /*horizontal scroll  */
+    box-shadow: 5px 5px lightgray
 }
 .business-info-card .col-sm-2{
     font-family: Arial;

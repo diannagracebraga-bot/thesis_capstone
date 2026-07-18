@@ -48,7 +48,7 @@ if(isset($_POST['update'])){
 <body>
 		<?php include 'admin_sidebar_header_profile.php'; ?>
 
-		<div class="content-management-container">
+		
 
          <!--<div class="col-sm-9 offset-sm-9 mb-4">
                   <a href="admin_edit_plan.php">  <button type="submit" name="edit_internet_plan" 
@@ -56,8 +56,11 @@ if(isset($_POST['update'])){
                         Edit Internet Plan
                     </button></a>
     </div>-->
+    
+        <h1> USER MANAGEMENT TRACKING </h1>
     <div class="card w-75">
   				<div class="card-body">
+                    <div class="content-management-container">
    <form method="POST" class="form-horizontal">
     <div class="content-wrapper">
 
@@ -68,15 +71,15 @@ if(isset($_POST['update'])){
 </div>
         
         <div class="business-info-card">
-            <div class="form-group row mb-4">
+            <div class="form-group row mb-3">
                 <label class="col-sm-2 col-form-label">BUSINESS NAME:</label>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" name="business_name"
                            value="<?php echo $row['business_name']; ?>">
                 </div>
             </div>
-<br>
-            <div class="form-group row mb-4">
+
+            <div class="form-group row mb-3">
                 <label class="col-sm-2 col-form-label">BUSINESS EMAIL:</label>
                 <div class="col-sm-7">
                     <input type="email" class="form-control" name="business_email"
@@ -85,22 +88,22 @@ if(isset($_POST['update'])){
             </div>
 
             <div class="form-group row mb-3">
-                <label class="col-sm-2 col-form-label">BUSINESS CONTACT NUMBER:</label>
+                <label class="col-sm-2 col-form-label">BUSINESS CONTACT:</label>
                 <div class="col-sm-7">
                     <input type="number" class="form-control" name="business_contact"
                            value="<?php echo $row['business_contact']; ?>">
                 </div>
             </div>
 
-            <div class="form-group row mb-4">
-                <label class="col-sm-2 col-form-label">BUSINESS FACEBOOK PAGE:</label>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label">FACEBOOK <i class="fa fa-pagelines" aria-hidden="true"></i>:</label>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" name="business_social_media"
                            value="<?php echo $row['business_social_media']; ?>">
                 </div>
             </div>
 
-            <div class="form-group row mb-4">
+            <div class="form-group row mb-3">
                 <label class="col-sm-2 col-form-label">BUSINESS ADDRESS:</label>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" name="business_address"
@@ -108,7 +111,7 @@ if(isset($_POST['update'])){
                 </div>
             </div>
 
-            <div class="form-group row mb-4">
+            <div class="form-group row mb-3">
                 <label class="col-sm-2 col-form-label">BUSINESS DESCRIPTION:</label>
                 <div class="col-sm-7">
                     <input type="text" class="form-control" name="business_description"

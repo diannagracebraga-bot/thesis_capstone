@@ -1,7 +1,7 @@
 .card{
     width: 75%;
     padding: 20px;
-    margin: auto;
+    margin: 0 0 0 305px;
     box-shadow: 0 6px 15px rgba(0,74,173,0.3);
 }
 .container {
