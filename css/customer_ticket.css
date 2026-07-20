@@ -53,3 +53,35 @@ td{
 .view-btn:hover{
     background:#0098bb;
 }
+.ticket-detail-box {
+    background: #f8fbff;
+    border: 1px solid #d8e6f5;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.ticket-detail-box p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.ticket-description-label {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.ticket-description {
+    resize: none;
+    background: #fff;
+}
+
+.ticket-modal .modal-header {
+    background: #004AAD;
+    color: #fff;
+}
+
+.ticket-modal .btn-close {
+    filter: invert(1);
+}
+
