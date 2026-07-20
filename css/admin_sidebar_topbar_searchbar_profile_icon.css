@@ -2,73 +2,68 @@ body{
     background-color: white;
     margin: 0;
 }
-.header{
-    background: blue;
-    width: 100%;
-    padding: 10px;
-}  
-.top-bar {
+
+.navbar{
     background: #004AAD;
-    padding: 16px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    position: sticky;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
     top: 0;
-}
-.profile-button {
-    display: flex;
-    padding: 6px 6px 6px 12px;
-    background: pink;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+    left: 0;
 }
 
 .icon2{
-    width:60px;
+    width: 60px;
     height: 60px;
-    margin-left:70px;
-    margin-top: 50px
+    margin-left: 70px;
+    margin-top: 50px;
 }
+
 .header{
     background: white;
     width: 100%;
     padding: 10px;
-}  
-.search-container1 {
+}
+
+.search-container1{
     display: flex;
     align-items: center;
     width: 300px;
     margin-left: auto;
 }
-.sidebar {
-    width: 200px;
-    background-color: white;
+
+.sidebar{
     position: fixed;
-    height: 100%;
-    border: 1px solid;
+    top: 85px;
+    left: 0;
+    width: 230px;
+    bottom: 0;
+    background-color: white;
+    border-right: 1px solid #ccc;
 }
+
 h1{
-    margin-top: 20px;
-    margin-left: 700px;
+    margin-top: 100px;   /* Moves title below the fixed navbar */
+    margin-left: 240px;  /* Moves title beside the sidebar */
     color: black;
+    text-align: center;
 }
+
 .sidebar a{
     display: block;
-    color: black    ;
-    padding: 12px;
+    padding: 14px 20px;
+    color: #333;
     text-decoration: none;
-
 }
+
 .sidebar a:hover{
     background-color: #E5E4E2;
-    color: rgb(61, 113, 130);   
+    color: rgb(61, 113, 130);
 }
+
 .dashboard{
     display: flex;
-    padding: 12px 12px;
+    padding: 12px;
     border-radius: 6px;
     cursor: pointer;
 }

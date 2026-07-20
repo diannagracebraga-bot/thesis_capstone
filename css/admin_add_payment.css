@@ -1,13 +1,18 @@
+.card{
+    width: 75%;
+    padding: 20px;
+    margin: 0 0 0 305px;
+    box-shadow: 0 6px 15px rgba(0,74,173,0.3);
+}
 body {
     margin: 0;
-    background-color: aliceblue;
 }
 
 .add_payment {
-    background-color: lightblue;
+    background-color: #eef6ff;;
     border-radius: 7px;
     padding: 40px;
-    width: 70%;
+    width: 100%;
     margin: 40px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }

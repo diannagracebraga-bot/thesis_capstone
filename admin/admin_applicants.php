@@ -34,12 +34,10 @@ if(mysqli_query($conn, $sql)){
 }}
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 	 <link rel="stylesheet" href="../css/admin_applicants.css">
 	 <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
 	<title>MITZTIANPC WIRED INTERNET SERVICES</title>
@@ -47,9 +45,9 @@ if(mysqli_query($conn, $sql)){
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
 	
-        <div class="header">
-        </div>
         	<h1>USER MANAGEMENT TRACKING</h1>
+			<div class="card w-75">
+  				<div class="card-body">
 			<div class = "table-container">
        <div class= "aligned">
 			<div class="searchbar-container">
@@ -58,27 +56,22 @@ if(mysqli_query($conn, $sql)){
 		</div>
         </div>
 		<br>
-				<table class = "table_applicants">
-					<thead>
+				<table class = "table table-secondary table-hover">
+					<thead class = "table-info">
 					<tr>
 						<th>APPLICANT ID</th>
 						<th>FIRST NAME</th>
 						<th>MIDDLE NAME</th>
 						<th>LAST NAME</th>
-						<th>BIRTH DATE</th>
-						<th>SEX</th>
 						<th>CONTACT NUMBER</th>
-						<th>BARANGAY</th>
-						<th>HOUSE NUMBER</th>
-						<th>STREET</th>
-						<th>SUBDIVISION</th>
 						<th>INTERNET PLAN</th>
 						<th>DATE RECEIVED</th>
 						<th>STATUS</th>
 						<th>ACTION</th>
 					</tr>
 					</thead>
-			<?php
+					<tbody>
+<?php
 $sql = "SELECT * FROM internet_application_tbl";
 $result = mysqli_query($conn, $sql);
 
@@ -87,30 +80,111 @@ while($row = mysqli_fetch_assoc($result)) {
     <tr>
         <td><?php echo $row['applicant_id']; ?></td>
         <td><?php echo $row['first_name']; ?></td>
-		<td><?php echo $row['middle_name']; ?></td>
-		<td><?php echo $row['last_name']; ?></td>
-        <td><?php echo $row['birth_date']; ?></td>
-		<td><?php echo $row['sex']; ?></td>
+        <td><?php echo $row['middle_name']; ?></td>
+        <td><?php echo $row['last_name']; ?></td>
         <td><?php echo $row['contact_number']; ?></td>
-		<td><?php echo $row['barangay']; ?></td>
-		<td><?php echo $row['house_number']; ?></td>
-		<td><?php echo $row['street']; ?></td>
-		<td><?php echo $row['subdivision']; ?></td>
-		<td><?php echo $row['internet_plan']; ?></td>
+        <td><?php echo $row['internet_plan']; ?></td>
         <td><?php echo $row['date_received']; ?></td>
         <td><?php echo $row['status']; ?></td>
         <td>
-            <a href="admin_applicants.php?applicant_id=<?php echo $row['applicant_id']; ?>">
-                <button> submit
-					</button>
-            </a>
-        </td> 	
+            <button class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#viewApplicant<?php echo $row['applicant_id']; ?>">
+				View</button>
+        </td>
     </tr>
 <?php
-} 
+}
 ?>
-				</table>
-				</div>
+    </tbody>
+</table>
+ </div>
+</div>
+<?php
+$result = mysqli_query($conn, "SELECT * FROM internet_application_tbl");
+
+while($row = mysqli_fetch_assoc($result)){
+?>
+
+<div class="modal fade"
+     id="viewApplicant<?php echo $row['applicant_id']; ?>"
+     tabindex="-1"
+     aria-labelledby="viewApplicantLabel<?php echo $row['applicant_id']; ?>"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow">
+
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="viewApplicantLabel<?php echo $row['applicant_id']; ?>">
+                    APPLICANT INFORMATION</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+					<thead class = "thead-info">
+                    <tr><th class="w-25">APPLICANT ID</th><td><?php echo $row['applicant_id']; ?></td> </tr>
+
+                    <tr><th>FIRST NAME</th><td><?php echo $row['first_name']; ?></td></tr>
+
+                    <tr><th>MIDDLE NAME</th><td><?php echo $row['middle_name']; ?></td></tr>
+
+                    <tr><th>LAST NAME</th><td><?php echo $row['last_name']; ?></td></tr>
+
+                    <tr><th>BIRTH DATE</th><td><?php echo $row['birth_date']; ?></td> </tr>
+
+                    <tr><th>SEX</th><td><?php echo ucfirst($row['sex']); ?></td></tr>
+
+                    <tr><th>CONTACT NUMBER</th><td><?php echo $row['contact_number']; ?></td></tr>
+
+                    <tr><th>BARANGAY</th><td><?php echo $row['barangay']; ?></td></tr>
+
+                    <tr><th>HOUSE NUMBER</th><td><?php echo $row['house_number']; ?></td></tr>
+
+                    <tr><th>STREET</th><td><?php echo $row['street']; ?></td></tr>
+
+                    <tr><th>SUBDIVISION</th><td><?php echo $row['subdivision']; ?></td></tr>
+
+                    <tr><th>INTERNET PLAN</th><td><?php echo $row['internet_plan']; ?></td></tr>
+
+                    <tr><th>DATE RECEIVED</th><td><?php echo $row['date_received']; ?></td></tr>
+
+                    <tr>
+                        <th>STATUS</th>
+                        <td>
+                            <select class="form-select" name="status">
+                                <option value="Pending" <?php if($row['status']=="Pending") echo "selected"; ?>>
+                                    Pending
+                                </option>
+
+                                <option value="Ongoing" <?php if($row['status']=="Ongoing") echo "selected"; ?>>
+                                    Ongoing
+                                </option>
+
+                                <option value="Resolved" <?php if($row['status']=="Resolved") echo "selected"; ?>>
+                                    Resolved
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+				
+                </table>
+				
+            </div>
+
+            <div class="modal-footer">
+				  <button type="submit" class="btn btn-success"> Save Changes</button>
+
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>
+
+
 			
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>			
 </body>
 </html>

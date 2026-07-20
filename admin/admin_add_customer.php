@@ -11,12 +11,12 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
     <form action="../database/insert_customer.php" method="POST">
         <div class="form_grid">
             <div class="form_group">
-                <label>Account Number</label>
-                <input type="number" name="account_number" required>
+                <label>id</label>
+                <input type="number" name="id" required>
             </div>
             <div class="form_group">
                 <label>Email Address</label>
-                <input type="email" name="email_address" required>
+                <input type="email" name="email" required>
             </div>
             <div class="form_group">
                 <label>Password</label>
@@ -24,32 +24,36 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
             </div>
             <div class="form_group">
                 <label>First Name</label>
-                <input type="text" name="first_name" required>
+                <input type="text" name="f_name" required>
             </div>
             <div class="form_group">
                 <label>Middle Name</label>
-                <input type="text" name="middle_name">
+                <input type="text" name="m_name">
             </div>
             <div class="form_group">
                 <label>Last Name</label>
-                <input type="text" name="last_name" required>
+                <input type="text" name="l_name" required>
+            </div>
+            <div class="form_group">
+                <label>Contact Number</label>
+                <input type="number" name="contact_number" required>
             </div>
             <div class="form_group">
                 <label>Age</label>
                 <input type="number" name="age" required>
             </div>
             <div class="form_group">
+                <label>Sex</label>
+                <select name="sex">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="form_group">
                 <label>Civil Status</label>
                 <select name="civil_status">
                     <option>Single</option>
                     <option>Married</option>
-                </select>
-            </div>
-            <div class="form_group">
-                <label>Sex</label>
-                <select name="gender">
-                    <option>Male</option>
-                    <option>Female</option>
                 </select>
             </div>
             <div class="form_group">
@@ -63,21 +67,29 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
                     <option>Amaya II</option>
                     <option>Amaya III</option>
                 </select>
-
-            </div>
-            <div class="form_group">
-                <label>House Number</label>
-                <input type="text" name="house_number">
-            </div>
-            <div class="form_group">
-                <label>Street</label>
-                <input type="text" name="street">
             </div>
             <div class="form_group">
                 <label>Subdivision</label>
                 <input type="text" name="subdivision">
             </div>
             <div class="form_group">
+                <label>Street</label>
+                <input type="text" name="street">
+            </div>
+            <div class="form_group">
+                <label>House Number</label>
+                <input type="text" name="house_number">
+            </div>
+            <div class="form_group">
+            <label>Role</label>
+                 <select name="role">
+                    <option>Super Admin</option>
+                    <option>Admin</option>
+                    <option>Customer</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <label>Internet Plan</label>
         <?php
             
             $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl");
@@ -98,7 +110,7 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
                 </select>
             </div>
            <div class="form_group full_width">
-           <input type="submit" name="register" value="Register">
+           <input type="submit" class = "btn btn-success"name="register" value="Register">
            </div>
         </div>
     </form>

@@ -16,9 +16,10 @@ include '../database/database_connection.php';
 </head>
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
-	
-		<h1> User Management Tracking </h1>
 
+		<h1> USER MANAGEMENT TRACKING </h1>
+				<div class="card w-75">
+  				<div class="card-body">
 			<div class = "table-container">
 				<div class = "aligned" >
         <div class="searchbar-container">
@@ -27,8 +28,8 @@ include '../database/database_connection.php';
 				</div>
 </div>
 		<br>
-				<table class = "table_inquiries">
-					<thead>
+				<table class = "table table-secondary table-hover">
+					<thead class = " table-info">
 					<tr>
 						<th> ID </th>
 						<th>FULL NAME </th>
@@ -63,6 +64,7 @@ while($row = mysqli_fetch_assoc($result)) {
 } 
 ?>
 </table>
-					
+</div>
+</div>		
 </body>
 </html>

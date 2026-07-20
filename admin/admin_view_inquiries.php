@@ -34,7 +34,8 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
-       
+       		<div class="card w-75">
+  				<div class="card-body">
 <div class="form_container">
 
     <div class="container">
@@ -77,6 +78,7 @@ $row = mysqli_fetch_assoc($result);
 
     </div>
 </div>
-
+</div>
+</div>
 </body>
 </html>

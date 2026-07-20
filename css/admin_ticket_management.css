@@ -1,10 +1,11 @@
-.table-container{
+.card{
     width: 75%;
-    height: 100vh;
-    margin: auto ;
-    border-radius: 50px;
-    border: 2px solid black;
     padding: 20px;
+    margin: 0 0 0 305px;
+    box-shadow: 0 6px 15px rgba(0,74,173,0.3);
+}
+.table-container{
+    max-height: 550px;
     overflow-y: auto; /* vertical scroll */
     overflow-x: auto; /*horizontal scroll  */
 }

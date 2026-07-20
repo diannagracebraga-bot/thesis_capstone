@@ -1,12 +1,13 @@
-.table-container{
+.card{
     width: 75%;
-    height: 100vh;
-    margin: auto ;
-    border-radius: 50px;
-    border: 2px solid violet;
     padding: 20px;
-    overflow-y: auto; 
-    overflow-x: auto; 
+    margin: 0 0 0 305px;
+    box-shadow: 0 6px 15px rgba(0,74,173,0.3);
+}
+.table-container{
+    max-height: 550px;
+    overflow-y: auto; /* vertical scroll */
+    overflow-x: auto; /*horizontal scroll  */
 }
  .table_applicants{
     width: 90%;
@@ -17,7 +18,7 @@
     border-radius: 10px; 
     letter-spacing: 3px;
     padding: 2px;
-    margin-left: 400px;
+    margin-left: auto;
     color: blue;
 }
 .payment-plus2{
@@ -52,4 +53,20 @@
 .table_applicants tr:hover td{
     background: #E5E4E2;
     color: black;
+}
+
+
+.payment-plus button:hover, .searchbar-container button:hover{
+    background: lightgray;
+}
+.aligned{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+
+}
+.payment-plus button{
+    padding: 8px 18px;
 }

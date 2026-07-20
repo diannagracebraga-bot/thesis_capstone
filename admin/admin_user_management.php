@@ -1,7 +1,7 @@
 <?php
 $page = $_GET['page'] ?? 'users';
+include '../database/database_connection.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,25 +13,78 @@ $page = $_GET['page'] ?? 'users';
     <title>User Management</title>
 </head>
 <body>
-
     <?php include 'admin_sidebar_header_profile.php'; ?>
-
+    
     <h1>User Management Tracking</h1>
-
+<<<<<<< HEAD
+=======
+                <div class="card w-75">
+  				<div class="card-body">
+>>>>>>> e14a651beb965dbdc97fe0cba7317ff50684306d
     <div class="table-container">
-
 <?php
-     if ($page == 'add_customer') {
-        include 'admin_add_customer.php';
-       
-		} else {
-        ?>
+if ($page == 'add_customer') {
+    include 'admin_add_customer.php';
+    } else {
+?>
 
-        <table class="table_applicants">
-            <thead>
+<table class="table_applicants">
+    <thead>
+        <tr>
+            <th>ACCOUNT NUMBER</th>
+            <th>NAME</th>
+            <th>EMAIL ADDRESS</th>
+            <th>ROLE</th>
+            <th>ACCOUNT STATUS</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+$sql = "SELECT * FROM login_tbl";
+$result = mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+?>
+    <tr>
+    <td><?php echo $row['id']; ?></td>
+    <td>
+        <?php 
+        echo $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
+        ?>
+<<<<<<< HEAD
+    </td>
+    <td><?php echo $row['email']; ?></td>
+    <td> Customer </td>
+    <td><?php echo $row['connection_status']; ?></td>
+    <td><a href="edit_user.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+    <a href="../database/delete.php?id=<?php echo $row['id']; ?>" 
+</tr>
+    <?php
+    }
+    } else {
+        ?>
+        <tr>
+            <td colspan="6" style="text-align:center;">No Customer Registered</td>
+        </tr>
+<?php
+}
+?>
+</tbody>
+</table>
+<?php
+}
+?>
+</script>
+</div>
+=======
+
+        <table class="table table-secondary table-hover">
+            <thead class = "table-info">
                 <tr>
                     <th>ACCOUNT NUMBER</th>
-                    <th>Name</th>
+                    <th>NAME</th>
                     <th>EMAIL ADDRESS</th>
                     <th>ROLE</th>
                     <th>ACCOUNT STATUS</th>
@@ -40,10 +93,13 @@ $page = $_GET['page'] ?? 'users';
             </thead>
             
         </table>
+</div>
+</div>
 
  <?php } ?>
 
     </div>
 
+>>>>>>> e14a651beb965dbdc97fe0cba7317ff50684306d
 </body>
 </html>

@@ -21,7 +21,7 @@ if(isset($_POST['register'])){
     $check=mysqli_query($conn,"SELECT * FROM login_tbl WHERE email='$email'");
 
     if(mysqli_num_rows($check)>0){
-        echo "<script> alert('Email Already Exists');
+        echo "<script> alert('Email already Exists');
         window.location='admin_add_customer.php'; </script>";
     exit();
 }

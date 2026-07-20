@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,12 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/admin_dashboard.css">
         <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
-        <script type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
-<script type="module">
-  var myLandbot = new Landbot.Popup({
-    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3474225-XXVB9WE5W6WPVY0W/index.json',
-  });
-</script>
+
 </head>
         
 <body>

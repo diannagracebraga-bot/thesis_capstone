@@ -11,10 +11,10 @@
 <body>
      <?php include 'admin_sidebar_header_profile.php'; ?>
 
-        <div class="header">
-        </div>
+    
             <h1>USER MANAGEMENT TRACKING</h1>
-            
+            <div class="card w-75">
+  				<div class="card-body">
 			<div class = "table-container1">
     <div class = "aligned" >
         <div class="searchbar-container">
@@ -24,14 +24,14 @@
                <div class="add_customer">
     <form action="admin_user_management.php" method="get">
         <input type="hidden" name="page" value="add_customer">
-        <button type="submit">Add Customer</button>
+        <button class= "btn btn-primary" type="submit">Add Customer</button>
     </form>
 </div> 
   		  </div>
 
                 <br>
-				<table class = "customer-list">
-					<thead>
+				<table class = "table table-secondary table-hover">
+					<thead class ="table-info">
 					<tr>
 						<th>CUSTOMER ID</th>
 						<th>FIRST NAME</th>
@@ -45,6 +45,8 @@
 						
 						
 				</table>
+</div>
+</div>
 				</div>
 </body>
 </html>

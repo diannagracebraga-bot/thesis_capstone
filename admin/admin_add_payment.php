@@ -38,7 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>    <?php include 'admin_sidebar_header_profile.php'; ?>
-
+		<div class="card w-75">
+  				<div class="card-body">
 <div class="add_payment">
     <h3>Add Payment</h3>
 
@@ -106,6 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </form>
 </div>
-
+</div>
+</div>
 </body>
 </html>

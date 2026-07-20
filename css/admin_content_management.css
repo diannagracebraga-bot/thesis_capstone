@@ -1,16 +1,14 @@
-.content-management-container {
+.card{
     width: 75%;
-    margin: auto;
-    border-radius: 50px;
-    border: 2px solid black;
     padding: 20px;
+    margin: 0 0 0 305px;
+    box-shadow: 0 6px 15px rgba(0,74,173,0.3);
 }
 .business-info-card{
-    background-color: #e9eaec;
-    padding: 50px;
+     background-color: #e9eaec;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 5px 5px lightgray;
-    
+    box-shadow: 5px 5px lightgray
 }
 .business-info-card .col-sm-2{
     font-family: Arial;

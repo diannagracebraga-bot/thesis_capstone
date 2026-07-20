@@ -3,25 +3,38 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin_sidebar_topbar_searchbar_profile_icon.css">
     <title>MITZTIANPC WIRED INTERNET SERVICES</title>
 </head>
 <body>
-        <header class="top-bar">
-        <div class="search-container1">
-        <form action="/admin_customer.php" method="GET">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">Search</button>
-        </form>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>  </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="dropdown ms-auto">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+
+                    <img src="" width="30" height="30"
+                      class="rounded-circle me-2">Dianna Braga Admin </button>
+
+                <div class="dropdown-menu dropdown-menu-end">
+                    <div>
+                        <a class="dropdown-item text-danger" href="logout.php">
+                            Logout
+                        </a>
+</div>
+</div>
+            </div>
         </div>
-        <button class="profile-button">
-                <div class="profile-container">
-                        <div class="profile-name"> Dianna Braga </div>
-                        <div class="profile-role"> Admin </div>
-                        </div>
-        </button>
-        </header>
+    </div>
+</nav>
+
         <div class="sidebar">
                 <div class="image-container">
                         <img src="../images/bg_logo.png" alt="Logo" class="icon2">
@@ -35,6 +48,7 @@
             <a class="dashboard" href="admin_user_management.php">User Management</a><br>
             <a class="dashboard" href="admin_content_management.php">Content Management</a><br>
         </div>
-        <div class="header">    
-        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>

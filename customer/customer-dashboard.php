@@ -12,9 +12,8 @@
 <body>
 <?php include 'customer_sidebar_header.php'; ?>
 <div class="content">
-
-
-
+    <div class="card w-100">
+  				<div class="card-body">
 
     <div class="top-section">
         <div class="welcome">
@@ -22,11 +21,11 @@
             <p><strong>Account No:</strong> MTZ-10027</p>
         </div>
         <div class="right-top">
-            <div class="date-card">
+            <div class="card">
                 <p>Tuesday</p>  
                 <h3>July 8, 2026</h3>
             </div>
-            <div class="plan-card">
+            <div class="card">
                 <h3>Current Plan</h3>
                 <h2>₱800</h2>
                 <p>50 Mbps</p>
@@ -46,13 +45,7 @@
             <span>July 15, 2026</span>
         </div>
     </div>
-    <div class="announcement">
-        <h3>Latest Announcement</h3>
-        <p>
-            Scheduled maintenance on July 10, 2026 from
-            12:00 AM - 4:00 AM.
-        </p>
-    </div>
+
     <div class="payment-box">
         <div class="payment-header">
             <h3>Payment History</h3>
@@ -105,7 +98,8 @@
             </tbody>
 
         </table>
-
+</div>
+</div>
     </div>
 
 </div>
