@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/customer_sidebar_header.css?v=4">
-    <link rel="stylesheet" href="../css/customer_support.css?v=3">
+    <link rel="stylesheet" href="../css/customer_sidebar_header.css">
+    <link rel="stylesheet" href="../css/customer_support.css">
     
 </head>
 
@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include 'customer_sidebar_header.php'; ?>
 
 <div class="support-content">
+    <div class="card w-100">
+  				<div class="card-body">
     <div class="form-section">
         <?php if ($message !== ""): ?>
     <p class="support-message"><?php echo $message; ?></p>
@@ -93,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 </div>
-
+        </div>
+        </div>
 </body>
 </html>

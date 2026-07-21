@@ -1,31 +1,4 @@
-<?php
-include '../database/database_connection.php';
 
-$customer_id = 1;
-$message = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $address = mysqli_real_escape_string($conn, $_POST["address"]);
-    $contact_number = mysqli_real_escape_string($conn, $_POST["contact_number"]);
-    $civil_status = mysqli_real_escape_string($conn, $_POST["civil_status"]);
-
-    $update = "UPDATE customer_tbl 
-               SET address='$address',
-                   contact_number='$contact_number',
-                   civil_status='$civil_status'
-               WHERE customer_id=$customer_id";
-
-    if (mysqli_query($conn, $update)) {
-        $message = "Profile updated successfully.";
-    } else {
-        $message = "Update failed.";
-    }
-}
-
-$query = "SELECT * FROM customer_tbl WHERE customer_id = $customer_id";
-$result = mysqli_query($conn, $query);
-$customer = mysqli_fetch_assoc($result);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +15,8 @@ $customer = mysqli_fetch_assoc($result);
     <?php include 'customer_sidebar_header.php'; ?>
 
     <main class="profile-content">
+        <div class="card w-100">
+  				<div class="card-body">
         <section class="profile-section">
             <h2>Customer Information</h2>
 
@@ -108,6 +83,8 @@ $customer = mysqli_fetch_assoc($result);
                 <button type="submit" class="save-btn">Save</button>
             </form>
         </section>
+</div>
+</div>
     </main>
 </body>
 </html>

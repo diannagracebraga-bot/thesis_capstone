@@ -15,7 +15,8 @@ body {
     width: 100%;
     max-width: 820px;
     margin: 0 auto;
-    background: #fff;
+    border-radius: 10px;
+    background: pink;
     padding: 24px 28px 30px;
 }
 .profile-section h2 {

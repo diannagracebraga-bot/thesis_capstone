@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $query);
 <?php include 'customer_sidebar_header.php'; ?>
 
     <main class="ticket-content">
-         <div class="card w-75">
+         <div class="card">
   				<div class="card-body">
         <div class="ticket-section">
             <h2>My Tickets</h2>
