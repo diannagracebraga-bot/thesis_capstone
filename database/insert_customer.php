@@ -17,6 +17,7 @@ if(isset($_POST['register'])){
     $subdivision=$_POST['subdivision'];
     $street=$_POST['street'];
     $plan=$_POST['internet_plan'];
+    
     $status=$_POST['connection_status'];
     $check=mysqli_query($conn,"SELECT * FROM login_tbl WHERE email='$email'");
 
@@ -24,6 +25,7 @@ if(isset($_POST['register'])){
         echo "<script> alert('Email already Exists');
         window.location='admin_add_customer.php'; </script>";
     exit();
+    
 }
 $sql="INSERT INTO login_tbl
 (id, email, password, f_name, m_name, l_name, age, sex, civil_status,
