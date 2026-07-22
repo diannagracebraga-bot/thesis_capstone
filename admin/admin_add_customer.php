@@ -63,9 +63,9 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
             <div class="form_group">
             <label>Barangay</label>
                 <select name="barangay">
-                    <option>Amaya I</option>
-                    <option>Amaya II</option>
-                    <option>Amaya III</option>
+                    <option>Bagtas</option>
+                    <option>Punta sI</option>
+            
                 </select>
             </div>
             <div class="form_group">

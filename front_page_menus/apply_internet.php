@@ -66,47 +66,8 @@ include '../database/database_connection.php';
                 <label>Barangay:</label>
                 <select class = "form-control" id = "barangay"  name="barangay" required>
                     <option value="">-- Select Barangay --</option>
-                    <option>Amaya I</option>
-                    <option>Amaya II</option>
-                    <option>Amaya III</option>
-                    <option>Amaya IV</option>
-                    <option>Amaya V</option>
-                    <option>Amaya VI</option>
-                    <option>Amaya VII</option>
-                    <option>Bagtas</option>
-                    <option>Barangay I</option>
-                    <option>Barangay II</option>
-                    <option>Barangay III</option>
-                    <option>Barangay IV</option>
-                    <option>Biga</option>
-                    <option>Biwas</option>
-                    <option>Bucal</option>
-                    <option>Bunga</option>
-                    <option>Calibuyo</option>
-                    <option>Capipisa</option>
-                    <option>Daang Amaya I</option>
-                    <option>Daang Amaya II</option>
-                    <option>Daang Amaya III</option>
-                    <option>Halayhay</option>
-                    <option>Julugan I</option>
-                    <option>Julugan II</option>
-                    <option>Julugan III</option>
-                    <option>Julugan IV</option>
-                    <option>Julugan V</option>
-                    <option>Julugan VI</option>
-                    <option>Julugan VII</option>
-                    <option>Julugan VIII</option>
-                    <option>Lambingan</option>
-                    <option>Mulawin</option>
-                    <option>Paradahan I</option>
-                    <option>Paradahan II</option>
-                    <option>Punta I</option>
-                    <option>Punta II</option>
-                    <option>Sahud Ulan</option>
-                    <option>Sanja Mayor</option>
-                    <option>Santol</option>
-                    <option>Tanauan</option>
-                    <option>Tres Cruses</option>
+                  <option>Bagtas</option>
+                  <option>Punta I</option>
                 </select>
             </div>
 
