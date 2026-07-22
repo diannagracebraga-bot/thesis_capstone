@@ -20,68 +20,83 @@
         <section class="profile-section">
             <h2>Customer Information</h2>
 
-           <form class="profile-form" method="POST">
-                <div class="form-grid">
-                    <div class="field-group">
-                        <label for="first_name">First Name:</label>
-                        <input id="first_name" type="text" value="<?php echo $customer['first_name']; ?>" readonly>
-                    </div>
+         <form method="POST">
+    <div class="row g-3">
 
-                    <div class="field-group">
-                        <label for="middle_name">Middle Name:</label>
-                        <input id="middle_name" type="text" value="<?php echo $customer['middle_name']; ?>" readonly>
+        <div class="col-md-4">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['first_name']; ?>" readonly>
+        </div>
 
-                    </div>
+        <div class="col-md-4">
+            <label class="form-label">Middle Name</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['middle_name']; ?>" readonly>
+        </div>
 
-                    <div class="field-group">
-                        <label for="last_name">Last Name:</label>
-                        <input id="last_name" type="text" value="<?php echo $customer['last_name']; ?>" readonly>
-                    </div>
+        <div class="col-md-4">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['last_name']; ?>" readonly>
+        </div>
 
-                    <div class="field-group">
-                        <label for="birth_date">Birth Date:</label>
-                       <input id="birth_date" type="text" value="<?php echo $customer['birth_date']; ?>" readonly>
-                    </div>
+        <div class="col-md-4">
+            <label class="form-label">Birth Date</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['birth_date']; ?>" readonly>
+        </div>
 
-                    <div class="field-group">
-                        <label for="age">Age:</label>
-                        <input id="age" type="text" value="<?php echo $customer['age']; ?>" readonly>
+        <div class="col-md-4">
+            <label class="form-label">Age</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['age']; ?>" readonly>
+        </div>
 
-                    </div>
+        <div class="col-md-4">
+            <label class="form-label">Sex</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['sex']; ?>" readonly>
+        </div>
 
-                    <div class="field-group">
-                        <label for="sex">Sex:</label>
-                        <input id="sex" type="text" value="<?php echo $customer['sex']; ?>" readonly>
-                    </div>
+        <div class="col-md-6">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control"
+                   name="address"
+                   value="<?php echo $customer['address']; ?>">
+        </div>
 
-                    <div class="field-group">
-                        <label for="address">Address:</label>
-                        <input id="address" name="address" type="text" value="<?php echo $customer['address']; ?>">
-                    </div>
+        <div class="col-md-3">
+            <label class="form-label">Contact Number</label>
+            <input type="text" class="form-control"
+                   name="contact_number"
+                   value="<?php echo $customer['contact_number']; ?>">
+        </div>
 
-                    <div class="field-group">
-                        <label for="contact_number">Contact Number:</label>
-                        <input id="contact_number" name="contact_number" type="text" value="<?php echo $customer['contact_number']; ?>">
-                    </div>
+        <div class="col-md-3">
+            <label class="form-label">Civil Status</label>
+            <select class="form-select" name="civil_status">
+                <option <?php if($customer['civil_status']=="Single") echo "selected"; ?>>Single</option>
+                <option <?php if($customer['civil_status']=="Married") echo "selected"; ?>>Married</option>
+                <option <?php if($customer['civil_status']=="Widowed") echo "selected"; ?>>Widowed</option>
+                <option <?php if($customer['civil_status']=="Separated") echo "selected"; ?>>Separated</option>
+            </select>
+        </div>
 
-                    <div class="field-group">
-                        <label for="civil_status">Civil Status:</label>
-                        <select id="civil_status" name="civil_status">
-                     <option <?php if ($customer['civil_status'] == 'Single') echo 'selected'; ?>>Single</option>
-                     <option <?php if ($customer['civil_status'] == 'Married') echo 'selected'; ?>>Married</option>
-                     <option <?php if ($customer['civil_status'] == 'Widowed') echo 'selected'; ?>>Widowed</option>
-                     <option <?php if ($customer['civil_status'] == 'Separated') echo 'selected'; ?>>Separated</option>
-                        </select>
-                    </div>
+        <div class="col-md-6">
+            <label class="form-label">Internet Plan</label>
+            <input type="text" class="form-control"
+                   value="<?php echo $customer['internet_plan_id']; ?>" readonly>
+        </div>
 
-                    <div class="field-group">
-                        <label for="internet_plan">Internet Plan:</label>
-                        <input id="internet_plan" type="text" value="<?php echo $customer['internet_plan_id']; ?>" readonly>
-                    </div>
-                </div>
+        <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-primary ">
+                Save
+            </button>
+        </div>
 
-                <button type="submit" class="save-btn">Save</button>
-            </form>
+    </div>
+</form>
         </section>
 </div>
 </div>
