@@ -3,7 +3,7 @@ include '../database/database_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $plan = $_POST['Plan'];
+    $plan = $_POST['plan'];
     $f_name = $_POST['f_name'];
     $m_name = $_POST['m_name'];
     $l_name = $_POST['l_name'];
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $query = "INSERT INTO payment_tbl
               (plan, f_name, m_name, l_name, payment_method, due_date, remarks, amount)
               VALUES
-              ('$plan','$f_name','$m_name','$l_name','$payment_method', '$due_date', '$remarks', '$amount')";
+              ('$plan', '$f_name','$m_name','$l_name','$payment_method', '$due_date', '$remarks', '$amount')";
 
     $result = mysqli_query($conn, $query);
 
