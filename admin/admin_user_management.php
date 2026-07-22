@@ -14,12 +14,7 @@ include '../database/database_connection.php';
 </head>
 <body>
     <?php include 'admin_sidebar_header_profile.php'; ?>
-    
-<<<<<<< HEAD
-    <h1>User Management Tracking</h1>
-=======
     <h1>USER MANAGEMENT TRACKING</h1>
->>>>>>> ac97d6c04cbf26442dd2c4804a9776ed1cff1dde
                 <div class="card w-75">
   				<div class="card-body">
     <div class="table-container">
@@ -28,7 +23,6 @@ if ($page == 'add_customer') {
     include 'admin_add_customer.php';
     } else 
 ?>
-
 <table class="table_applicants">
     <thead>
         <tr>
@@ -54,7 +48,6 @@ if(mysqli_num_rows($result) > 0){
         <?php 
         echo $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
         ?>
-<<<<<<< HEAD
     </td>
     <td><?php echo $row['email']; ?></td>
     <td> Customer </td>
@@ -85,28 +78,5 @@ if(mysqli_num_rows($result) > 0){
  <?php  ?>
 
     </div>
-=======
-
-        <table class="table table-secondary table-hover">
-            <thead class = "table-info">
-                <tr>
-                    <th>ACCOUNT NUMBER</th>
-                    <th>NAME</th>
-                    <th>EMAIL ADDRESS</th>
-                    <th>ROLE</th>
-                    <th>ACCOUNT STATUS</th>
-                    <th>ACTION</th>
-                </tr>
-            </thead>
-            
-        </table>
-</div>
-</div>
-
- <?php }} ?>
-
-    </div>
-
->>>>>>> ac97d6c04cbf26442dd2c4804a9776ed1cff1dde
 </body>
 </html>

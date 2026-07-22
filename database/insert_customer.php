@@ -1,7 +1,6 @@
 ﻿<?php
 include '../database/database_connection.php';
 
-<<<<<<< HEAD
 if(isset($_POST['register'])){
     $id=$_POST['account_number'];
     $email=$_POST['email_address'];
@@ -12,38 +11,12 @@ if(isset($_POST['register'])){
         echo "<script> alert('Email already Exists');
         window.location='admin_add_customer.php'; </script>";
     exit();
-    
 }
 $sql="INSERT INTO customer_tbl
 (id, email, password, f_name, m_name, l_name, age, sex, civil_status,
  birth_date, barangay, subdivision, street, house_name, internet_plan, connection_status)
  VALUES ('$fname', '$mname', '$lname', '$age', '$sex', '$civil',
 '$birth','$barangay', '$subdivision', '$street', '$house', '$plan','$status')";
-=======
-if (isset($_POST['register'])) {
-    $id = mysqli_real_escape_string($conn, $_POST['id'] ?? $_POST['account_number'] ?? '');
-    $email = mysqli_real_escape_string($conn, $_POST['email'] ?? $_POST['email_address'] ?? '');
-    $password_raw = $_POST['password'] ?? '';
-    $password = password_hash($password_raw, PASSWORD_DEFAULT);
-    $fname = mysqli_real_escape_string($conn, $_POST['f_name'] ?? $_POST['first_name'] ?? '');
-    $mname = mysqli_real_escape_string($conn, $_POST['m_name'] ?? $_POST['middle_name'] ?? '');
-    $lname = mysqli_real_escape_string($conn, $_POST['l_name'] ?? $_POST['last_name'] ?? '');
-    $contact = mysqli_real_escape_string($conn, $_POST['contact_number'] ?? '');
-    $age = mysqli_real_escape_string($conn, $_POST['age'] ?? '');
-    $sex = mysqli_real_escape_string($conn, $_POST['sex'] ?? $_POST['gender'] ?? '');
-    $civil = mysqli_real_escape_string($conn, $_POST['civil_status'] ?? '');
-    $birth = mysqli_real_escape_string($conn, $_POST['birth_date'] ?? '');
-    $barangay = mysqli_real_escape_string($conn, $_POST['barangay'] ?? '');
-    $subdivision = mysqli_real_escape_string($conn, $_POST['subdivision'] ?? '');
-    $street = mysqli_real_escape_string($conn, $_POST['street'] ?? '');
-    $house = mysqli_real_escape_string($conn, $_POST['house_number'] ?? $_POST['house_name'] ?? '');
-    $role = mysqli_real_escape_string($conn, $_POST['role'] ?? 'Customer');
-    $plan = mysqli_real_escape_string($conn, $_POST['internet_plan'] ?? '');
-    $status = mysqli_real_escape_string($conn, $_POST['connection_status'] ?? 'Connected');
-
-    $address_parts = array_filter([$house, $street, $subdivision, $barangay]);
-    $address = mysqli_real_escape_string($conn, implode(', ', $address_parts));
->>>>>>> ac97d6c04cbf26442dd2c4804a9776ed1cff1dde
 
     $check = mysqli_query($conn, "SELECT * FROM customer_tbl WHERE email_address = '$email' OR username = '$email'");
 
