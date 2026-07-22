@@ -4,20 +4,15 @@ include '../database/database_connection.php';
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $full_name = trim($_POST["full_name"] ?? "");
-    $email_address = trim($_POST["email_address"] ?? "");
-    $contact_number = trim($_POST["contact_number"] ?? "");
-    $concern_type = trim($_POST["concern_type"] ?? "");
-    $description = trim($_POST["description"] ?? "");
+    $full_name = $_POST["full_name"] ?? "";
+    $email_address = $_POST["email_address"] ?? "";
+    $contact_number = $_POST["contact_number"] ?? "";
+    $concern_type = $_POST["concern_type"] ?? "";
+    $description = $_POST["description"] ?? "";
 
-    if ($full_name === "" || $email_address === "" || $contact_number === "" || $concern_type === "" || $description === "") {
+    if ($full_name == "" || $email_address == "" || $contact_number == "" || $concern_type == "" || $description == "") {
         $message = "Please fill out all required fields.";
     } else {
-        $full_name = mysqli_real_escape_string($conn, $full_name);
-        $email_address = mysqli_real_escape_string($conn, $email_address);
-        $contact_number = mysqli_real_escape_string($conn, $contact_number);
-        $concern_type = mysqli_real_escape_string($conn, $concern_type);
-        $description = mysqli_real_escape_string($conn, $description);
         $date_received = date("Y-m-d");
         $status = "Pending";
 
@@ -49,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include 'customer_sidebar_header.php'; ?>
 
 <div class="support-content">
+    <div class="card w-100">
+  				<div class="card-body">
     <div class="form-section">
         <?php if ($message !== ""): ?>
             <div class="alert alert-info support-alert">
@@ -95,8 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <button type="submit" class="submit-btn">Submit</button>
         </form>
-    </div>
-</div>
 </body>
 </html>
 

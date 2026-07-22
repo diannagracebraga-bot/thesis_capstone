@@ -34,6 +34,7 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <body>
 	<?php include 'admin_sidebar_header_profile.php'; ?>
+    <h1>USER MANAGEMENT TRACKING</h1>
        		<div class="card w-75">
   				<div class="card-body">
 <div class="form_container">
@@ -42,10 +43,29 @@ $row = mysqli_fetch_assoc($result);
 
         <div class="top-section">
           <form method="POST">
-    <div class="status">
-        <label>Status</label>
+   <div class="status">
 
-        <select name="status">
+<label>Status</label>
+
+<div>
+<?php
+
+if($row['status']=="Pending"){
+    echo '<span class="badge status-badge bg-warning text-dark">Pending</span>';
+}
+elseif($row['status']=="Ongoing"){
+    echo '<span class="badge status-badge bg-primary">Ongoing</span>';
+}
+elseif($row['status']=="Resolved"){
+    echo '<span class="badge status-badge bg-success">Resolved</span>';
+}
+
+?>
+</div>
+
+<br>
+
+<select name="status">
             <option value="Ongoing" <?php if($row['status'] == 'Ongoing') echo 'selected'; ?>>Ongoing</option>
             <option value="Resolved" <?php if($row['status'] == 'Resolved') echo 'selected'; ?>>Resolved</option>
             <option value="Pending" <?php if($row['status'] == 'Pending') echo 'selected'; ?>>Pending</option>

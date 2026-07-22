@@ -1,6 +1,24 @@
 <?php
 include '../database/database_connection.php';
 
+if(isset($_POST['update_status'])){
+
+    $applicant_id = $_POST['applicant_id'];
+    $status = $_POST['status'];
+
+    $sql = "UPDATE internet_application_tbl 
+            SET status='$status'
+            WHERE applicant_id='$applicant_id'";
+
+    if(mysqli_query($conn,$sql)){
+        echo "<script>
+                alert('Status Updated Successfully!');
+                window.location='admin_applicants.php';
+              </script>";
+    }else{
+        echo "Error: ".mysqli_error($conn);
+    }
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $first_name = $_POST['first_name'];
@@ -85,7 +103,20 @@ while($row = mysqli_fetch_assoc($result)) {
         <td><?php echo $row['contact_number']; ?></td>
         <td><?php echo $row['internet_plan']; ?></td>
         <td><?php echo $row['date_received']; ?></td>
-        <td><?php echo $row['status']; ?></td>
+        <td>
+            <?php
+
+                if($row['status']=="Pending"){
+                     echo '<span class="badge status-badge bg-warning text-dark">Pending</span>';
+                    }
+                elseif($row['status']=="Ongoing"){
+                     echo '<span class="badge status-badge bg-primary">Ongoing</span>';
+                    }
+                    elseif($row['status']=="Resolved"){
+                     echo '<span class="badge status-badge bg-success">Resolved</span>';
+                    }
+?>
+</td>
         <td>
             <button class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#viewApplicant<?php echo $row['applicant_id']; ?>">
 				View</button>
@@ -150,40 +181,40 @@ while($row = mysqli_fetch_assoc($result)){
 
                     <tr><th>DATE RECEIVED</th><td><?php echo $row['date_received']; ?></td></tr>
 
-                    <tr>
-                        <th>STATUS</th>
-                        <td>
-                            <select class="form-select" name="status">
-                                <option value="Pending" <?php if($row['status']=="Pending") echo "selected"; ?>>
-                                    Pending
-                                </option>
+                   <form method="POST">
 
-                                <option value="Ongoing" <?php if($row['status']=="Ongoing") echo "selected"; ?>>
-                                    Ongoing
-                                </option>
+                        <input type="hidden" name="applicant_id" value="<?php echo $row['applicant_id']; ?>">
+                        
+                            <tr>
+                                <th>STATUS</th><td>
 
-                                <option value="Resolved" <?php if($row['status']=="Resolved") echo "selected"; ?>>
-                                    Resolved
-                                </option>
-                            </select>
-                        </td>
-                    </tr>
+                                <select class="form-select" name="status">
+                                    <option value="Pending"
+                                    <?php if($row['status']=="Pending") echo "selected"; ?>>Pending</option>
+
+                                    <option value="Ongoing"
+                                    <?php if($row['status']=="Ongoing") echo "selected"; ?>>Ongoing</option>
+
+                                    <option value="Resolved"<?php if($row['status']=="Resolved") echo "selected"; ?>>Resolved
+                                    </option>
+
+    </select>
+</td>
+</tr>
 				
                 </table>
 				
             </div>
-
             <div class="modal-footer">
-				  <button type="submit" class="btn btn-success"> Save Changes</button>
-
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> Close</button>
-            </div>
+			    <button type="submit" name="update_status" class="btn btn-success">
+                         Save Changes</button>
+                 <button type="button" class="btn tn-danger" data-bs-dismiss="modal">Close
+                </button>
+           </form>     </div>
         </div>
     </div>
 </div>
 <?php } ?>
-
-
 			
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>			
 </body>
