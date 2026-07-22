@@ -1,8 +1,24 @@
+.card{
+    width: 75%;
+    padding: 20px;
+    margin: 0 0 0 305px;
+    box-shadow: 0 6px 15px rgba(0,74,173,0.3);
+}
 .ticket_container {
     width: 100%;
     margin: 20px auto;
 }
+form{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.status,
+.action{
+    display: flex;
+    flex-direction: column;
+}
 .container {
     background-color: lightblue;
     border: 1px solid;

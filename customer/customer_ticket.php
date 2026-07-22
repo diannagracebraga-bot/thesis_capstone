@@ -61,7 +61,7 @@ if (!$result) {
                     </tr>
 
                     <div class="modal fade" id="ticketModal<?php echo $ticket['ticket_id']; ?>" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
                             <div class="modal-content ticket-modal">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Ticket Details</h5>
@@ -81,6 +81,9 @@ if (!$result) {
                                     <label class="ticket-description-label">Description:</label>
                                     <textarea class="form-control ticket-description" rows="5" readonly><?php echo htmlspecialchars($ticket['description']); ?></textarea>
                                 </div>
+                                <div><p><strong>Admin Reply:</strong></p>
+                                    <textarea readonly><?php echo $ticket['admin_reply']; ?></textarea>
+                            </div>
                             </div>
                         </div>
                     </div>

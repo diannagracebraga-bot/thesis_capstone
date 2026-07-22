@@ -11,7 +11,9 @@
 <body>
 
     <?php include 'admin_sidebar_header_profile.php'; ?>
-  <h1>User Management Tracking</h1>
+  <h1>USER MANAGEMENT TRACKING</h1>
+   <div class="card w-75">
+  				<div class="card-body">
 <div class="ticket_container">
 
     <div class="container">
@@ -37,7 +39,7 @@
         </select>
     </div>
 
-    <div class="action"><br>
+    <div class="action">
         <label>Action</label>
         <button type="submit" class="action-btn">Update</button>
     </div>
@@ -63,7 +65,18 @@
 </textarea>
                         </div>
 
+<div class="admin_reply">
+    <label>Reply to Customer:</label>
+    <textarea name="admin_reply" rows="4"></textarea>
+</div>
+
+<div class="action">
+    <button type="submit" class="action-btn">Send Reply</button>
+</div>
     </div>
+    
+</div>
+</div>
 </div>
 </body>
 </html>
