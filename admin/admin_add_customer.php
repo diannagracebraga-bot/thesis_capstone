@@ -81,14 +81,6 @@ $plan_query = mysqli_query($conn, "SELECT * FROM internet_plan_tbl ORDER BY plan
                 <input type="text" name="house_number">
             </div>
             <div class="form_group">
-            <label>Role</label>
-                 <select name="role">
-                    <option>Super Admin</option>
-                    <option>Admin</option>
-                    <option>Customer</option>
-                </select>
-            </div>
-            <div class="form_group">
                 <label>Internet Plan</label>
         <?php
             

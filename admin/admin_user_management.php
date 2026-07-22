@@ -16,11 +16,8 @@ include '../database/database_connection.php';
     <?php include 'admin_sidebar_header_profile.php'; ?>
     
     <h1>User Management Tracking</h1>
-<<<<<<< HEAD
-=======
                 <div class="card w-75">
   				<div class="card-body">
->>>>>>> e14a651beb965dbdc97fe0cba7317ff50684306d
     <div class="table-container">
 <?php
 if ($page == 'add_customer') {
@@ -41,7 +38,7 @@ if ($page == 'add_customer') {
     </thead>
     <tbody>
 <?php
-$sql = "SELECT * FROM login_tbl";
+$sql = "SELECT * FROM customer_tbl";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0){
@@ -53,7 +50,6 @@ if(mysqli_num_rows($result) > 0){
         <?php 
         echo $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
         ?>
-<<<<<<< HEAD
     </td>
     <td><?php echo $row['email']; ?></td>
     <td> Customer </td>
@@ -78,28 +74,11 @@ if(mysqli_num_rows($result) > 0){
 ?>
 </script>
 </div>
-=======
-
-        <table class="table table-secondary table-hover">
-            <thead class = "table-info">
-                <tr>
-                    <th>ACCOUNT NUMBER</th>
-                    <th>NAME</th>
-                    <th>EMAIL ADDRESS</th>
-                    <th>ROLE</th>
-                    <th>ACCOUNT STATUS</th>
-                    <th>ACTION</th>
-                </tr>
-            </thead>
-            
-        </table>
 </div>
 </div>
 
- <?php } ?>
+ <?php  ?>
 
     </div>
-
->>>>>>> e14a651beb965dbdc97fe0cba7317ff50684306d
 </body>
 </html>
