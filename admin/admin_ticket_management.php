@@ -63,7 +63,6 @@ if (!$result) {
 
 </table>
 </div>
-</div>
-				
+</div>		
 </body>
 </html>
