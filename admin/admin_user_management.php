@@ -14,7 +14,6 @@ include '../database/database_connection.php';
 </head>
 <body>
     <?php include 'admin_sidebar_header_profile.php'; ?>
-    
     <h1>USER MANAGEMENT TRACKING</h1>
                 <div class="card w-75">
   				<div class="card-body">
@@ -24,7 +23,6 @@ if ($page == 'add_customer') {
     include 'admin_add_customer.php';
     } else 
 ?>
-
 <table class="table_applicants">
     <thead>
         <tr>
@@ -38,7 +36,7 @@ if ($page == 'add_customer') {
     </thead>
     <tbody>
 <?php
-$sql = "SELECT * FROM login_tbl";
+$sql = "SELECT * FROM customer_tbl";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0){
@@ -50,26 +48,35 @@ if(mysqli_num_rows($result) > 0){
         <?php 
         echo $row['f_name'] . " " . $row['m_name'] . " " . $row['l_name'];
         ?>
-
-        <table class="table table-secondary table-hover">
-            <thead class = "table-info">
-                <tr>
-                    <th>ACCOUNT NUMBER</th>
-                    <th>NAME</th>
-                    <th>EMAIL ADDRESS</th>
-                    <th>ROLE</th>
-                    <th>ACCOUNT STATUS</th>
-                    <th>ACTION</th>
-                </tr>
-            </thead>
-            
-        </table>
+    </td>
+    <td><?php echo $row['email']; ?></td>
+    <td> Customer </td>
+    <td><?php echo $row['connection_status']; ?></td>
+    <td><a href="edit_user.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+    <a href="../database/delete.php?id=<?php echo $row['id']; ?>" 
+</tr>
+    <?php
+    }
+    } else {
+        ?>
+        <tr>
+            <td colspan="6" style="text-align:center;">No Customer Registered</td>
+        </tr>
+<?php
+}
+?>
+</tbody>
+</table>
+<?php
+}
+?>
+</script>
 </div>
 </div>
+</div>
 
- <?php }} ?>
+ <?php  ?>
 
     </div>
-
 </body>
 </html>

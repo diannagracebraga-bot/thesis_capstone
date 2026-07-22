@@ -52,10 +52,23 @@ while($row = mysqli_fetch_assoc($result)) {
         <td><?php echo $row['email_address']; ?></td>
         <td><?php echo $row['contact_number']; ?></td>
         <td><?php echo $row['date_received']; ?></td>
-        <td><?php echo $row['status']; ?></td>
+     	<td>
+			<?php
+
+				if($row['status']=="Pending"){
+  				  echo '<span class="badge status-badge bg-warning text-dark">Pending</span>';
+					}
+				elseif($row['status']=="Ongoing"){
+  				  echo '<span class="badge status-badge bg-primary">Ongoing</span>';
+					}
+				elseif($row['status']=="Resolved"){
+   				 echo '<span class="badge status-badge bg-success">Resolved</span>';
+					}
+?>
+</td>
         <td>
             <a href="admin_view_inquiries.php?inquiries_id=<?php echo $row['inquiries_id']; ?>">
-                <button class="img-btn"> <img src="../images/view_icon.png">
+                <button class = "btn btn-primary">View
 					</button>
             </a>
         </td> 	
