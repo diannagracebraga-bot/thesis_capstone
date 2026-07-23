@@ -80,9 +80,6 @@ if (!$result) {
                                     <label class="ticket-description-label">Description:</label>
                                     <textarea class="form-control ticket-description" rows="5" readonly><?php echo htmlspecialchars($ticket['description']); ?></textarea>
                                 </div>
-                                <div><p><strong>Admin Reply:</strong></p>
-                                    <textarea readonly><?php echo $ticket['admin_reply']; ?></textarea>
-                            </div>
                             </div>
                         </div>
                     </div>
